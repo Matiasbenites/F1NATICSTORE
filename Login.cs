@@ -26,12 +26,6 @@ namespace F1NATICSTORE
         {
 
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void TDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Solo números
@@ -41,12 +35,25 @@ namespace F1NATICSTORE
             }
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             Inicio formInicio = new Inicio();
 
             formInicio.Show();
             this.Hide();
+
+            formInicio.FormClosing += frm_closing;
+        }
+
+        private void frm_closing(object sender, FormClosingEventArgs e)
+        {
+            tDocumento.Text = "";
+            tContrasenia.Text = "";
+            this.Show();
         }
     }
 }
