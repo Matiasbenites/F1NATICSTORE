@@ -161,6 +161,7 @@ namespace F1NATICSTORE
             this.menuSalir.Size = new System.Drawing.Size(122, 69);
             this.menuSalir.Text = "Salir";
             this.menuSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuSalir.Click += new System.EventHandler(this.menuSalir_Click);
             // 
             // menuTitulo
             // 

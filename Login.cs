@@ -40,5 +40,13 @@ namespace F1NATICSTORE
                 e.Handled = true;
             }
         }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+            Inicio formInicio = new Inicio();
+
+            formInicio.Show();
+            this.Hide();
+        }
     }
 }

@@ -21,5 +21,10 @@ namespace F1NATICSTORE
         {
 
         }
+
+        private void menuSalir_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
