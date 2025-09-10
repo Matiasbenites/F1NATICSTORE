@@ -53,6 +53,11 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="F1naticStoreDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>F1naticStoreDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +87,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="F1naticStoreDataSet.xsc">
+      <DependentUpon>F1naticStoreDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="F1naticStoreDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>F1naticStoreDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="F1naticStoreDataSet.xss">
+      <DependentUpon>F1naticStoreDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -95,6 +111,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EntidadCapa\EntidadCapa.csproj">
+      <Project>{39f5843e-739b-4462-b59e-2bb4b87b8246}</Project>
+      <Name>EntidadCapa</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NegocioCapa\NegocioCapa.csproj">
+      <Project>{1567f4f9-05f9-42b4-89d3-a14aa4468ab2}</Project>
+      <Name>NegocioCapa</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

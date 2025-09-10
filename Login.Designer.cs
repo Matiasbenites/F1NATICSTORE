@@ -33,8 +33,8 @@
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.tDocumento = new System.Windows.Forms.TextBox();
-            this.tContrasenia = new System.Windows.Forms.TextBox();
+            this.txtDocumento = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.btnIngresar = new FontAwesome.Sharp.IconButton();
             this.btnCancelar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
@@ -103,23 +103,23 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Contraseña";
             // 
-            // tDocumento
+            // txtDocumento
             // 
-            this.tDocumento.Location = new System.Drawing.Point(266, 62);
-            this.tDocumento.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tDocumento.Name = "tDocumento";
-            this.tDocumento.Size = new System.Drawing.Size(196, 20);
-            this.tDocumento.TabIndex = 5;
-            this.tDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TDocumento_KeyPress);
+            this.txtDocumento.Location = new System.Drawing.Point(266, 62);
+            this.txtDocumento.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtDocumento.Name = "txtDocumento";
+            this.txtDocumento.Size = new System.Drawing.Size(196, 20);
+            this.txtDocumento.TabIndex = 5;
+            this.txtDocumento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TDocumento_KeyPress);
             // 
-            // tContrasenia
+            // txtClave
             // 
-            this.tContrasenia.Location = new System.Drawing.Point(266, 117);
-            this.tContrasenia.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tContrasenia.Name = "tContrasenia";
-            this.tContrasenia.PasswordChar = '*';
-            this.tContrasenia.Size = new System.Drawing.Size(196, 20);
-            this.tContrasenia.TabIndex = 6;
+            this.txtClave.Location = new System.Drawing.Point(266, 117);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.PasswordChar = '*';
+            this.txtClave.Size = new System.Drawing.Size(196, 20);
+            this.txtClave.TabIndex = 6;
             // 
             // btnIngresar
             // 
@@ -173,8 +173,8 @@
             this.ClientSize = new System.Drawing.Size(497, 221);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.tContrasenia);
-            this.Controls.Add(this.tDocumento);
+            this.Controls.Add(this.txtClave);
+            this.Controls.Add(this.txtDocumento);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.iconPictureBox1);
@@ -199,8 +199,8 @@
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox tDocumento;
-        private System.Windows.Forms.TextBox tContrasenia;
+        private System.Windows.Forms.TextBox txtDocumento;
+        private System.Windows.Forms.TextBox txtClave;
         private FontAwesome.Sharp.IconButton btnIngresar;
         private FontAwesome.Sharp.IconButton btnCancelar;
     }

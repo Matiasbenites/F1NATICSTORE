@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using NegocioCapa;
+using EntidadCapa;
+
 namespace F1NATICSTORE
 {
     public partial class Login : Form
@@ -41,18 +44,30 @@ namespace F1NATICSTORE
         }
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            Inicio formInicio = new Inicio();
 
-            formInicio.Show();
-            this.Hide();
+            List<Usuario> test = new NC_Usuario().Listar();
 
-            formInicio.FormClosing += frm_closing;
+            Usuario ousuario = new NC_Usuario().Listar().Where(u => u.Documento == txtDocumento.Text && u.Clave == txtClave.Text).FirstOrDefault();
+
+            if (ousuario != null)
+            {
+                Inicio formInicio = new Inicio();
+
+                formInicio.Show();
+                this.Hide();
+
+                formInicio.FormClosing += frm_closing;
+            }
+            else
+            {
+                MessageBox.Show("No se encontro el usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void frm_closing(object sender, FormClosingEventArgs e)
         {
-            tDocumento.Text = "";
-            tContrasenia.Text = "";
+            txtDocumento.Text = "";
+            txtClave.Text = "";
             this.Show();
         }
     }
