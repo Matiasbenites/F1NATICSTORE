@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace F1NATICSTORE
+namespace CapaPresentacion
 {
     public partial class Login : Form
     {
