@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace F1NATICSTORE.Properties
+namespace CapaPresentacion.Properties
 {
 
 

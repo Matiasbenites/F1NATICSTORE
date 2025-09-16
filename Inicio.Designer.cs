@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace F1NATICSTORE
+namespace CapaPresentacion
 {
     partial class Inicio
     {
@@ -42,6 +42,8 @@ namespace F1NATICSTORE
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
             this.contenedor = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +61,7 @@ namespace F1NATICSTORE
             this.menu.Location = new System.Drawing.Point(0, 64);
             this.menu.Name = "menu";
             this.menu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menu.Size = new System.Drawing.Size(1184, 73);
+            this.menu.Size = new System.Drawing.Size(1171, 73);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
             this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
@@ -77,6 +79,7 @@ namespace F1NATICSTORE
             this.menuUsuarios.Size = new System.Drawing.Size(122, 69);
             this.menuUsuarios.Text = "Usuarios";
             this.menuUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.menuUsuarios.Click += new System.EventHandler(this.menuUsuarios_Click);
             // 
             // menuBackup
             // 
@@ -170,7 +173,7 @@ namespace F1NATICSTORE
             this.menuTitulo.Location = new System.Drawing.Point(0, 0);
             this.menuTitulo.Name = "menuTitulo";
             this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(1184, 64);
+            this.menuTitulo.Size = new System.Drawing.Size(1171, 64);
             this.menuTitulo.TabIndex = 1;
             this.menuTitulo.Text = "menuStrip2";
             this.menuTitulo.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuTitulo_ItemClicked);
@@ -191,18 +194,53 @@ namespace F1NATICSTORE
             // contenedor
             // 
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.contenedor.ForeColor = System.Drawing.Color.Black;
             this.contenedor.Location = new System.Drawing.Point(0, 137);
             this.contenedor.Name = "contenedor";
+//<<<<<<< matias_desa
             this.contenedor.Size = new System.Drawing.Size(1184, 612);
+=======
+            this.contenedor.Size = new System.Drawing.Size(1171, 564);
+//>>>>>>> desarrollo_gp
             this.contenedor.TabIndex = 3;
             this.contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.contenedor_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(40)))), ((int)(((byte)(0)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(939, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 17);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Usuario :";
+            // 
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(40)))), ((int)(((byte)(0)))));
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.Black;
+            this.lblUsuario.Location = new System.Drawing.Point(1011, 36);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(69, 17);
+            this.lblUsuario.TabIndex = 5;
+            this.lblUsuario.Text = "lblusuario";
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+//<<<<<<< matias_desa
             this.ClientSize = new System.Drawing.Size(1184, 749);
+=======
+            this.ClientSize = new System.Drawing.Size(1171, 701);
+            this.Controls.Add(this.lblUsuario);
+            this.Controls.Add(this.label2);
+//>>>>>>> desarrollo_gp
             this.Controls.Add(this.contenedor);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menu);
@@ -223,7 +261,7 @@ namespace F1NATICSTORE
 
         private void menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
         private void menuTitulo_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
@@ -251,6 +289,8 @@ namespace F1NATICSTORE
         private FontAwesome.Sharp.IconMenuItem menuSalir;
         private FontAwesome.Sharp.IconMenuItem menuReportes;
         private Panel contenedor;
+        private Label label2;
+        private Label lblUsuario;
     }
 }
 

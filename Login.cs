@@ -8,10 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+// matias_desa
 using NegocioCapa;
 using EntidadCapa;
 
 namespace F1NATICSTORE
+=======
+namespace CapaPresentacion
+// desarrollo_gp
 {
     public partial class Login : Form
     {
