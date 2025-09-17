@@ -1,21 +1,12 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-// matias_desa
-using NegocioCapa;
-using EntidadCapa;
-
 namespace F1NATICSTORE
-=======
-namespace CapaPresentacion
-// desarrollo_gp
 {
     public partial class Login : Form
     {
@@ -49,9 +40,9 @@ namespace CapaPresentacion
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
-            List<Usuario> test = new NC_Usuario().Listar();
+            List<Usuario> test = new CN_Usuario().Listar();
 
-            Usuario ousuario = new NC_Usuario().Listar().Where(u => u.Documento == txtDocumento.Text && u.Clave == txtClave.Text).FirstOrDefault();
+            Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Documento == txtDocumento.Text && u.Clave == txtClave.Text).FirstOrDefault(); //Expresiones lambda para automatizar la busqueda de un objeto
 
             if (ousuario != null)
             {

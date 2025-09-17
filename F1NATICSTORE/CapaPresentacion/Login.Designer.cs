@@ -1,4 +1,4 @@
-﻿namespace CapaPresentacion
+﻿namespace F1NATICSTORE
 {
     partial class Login
     {
@@ -20,7 +20,7 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        //#region Windows Form Designer generated code
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -192,7 +192,7 @@
 
         }
 
-        #endregion
+        //#endregion
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

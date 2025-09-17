@@ -22,8 +22,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <PreferNativeArm64>true</PreferNativeArm64>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -55,18 +53,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-//<<<<<<< matias_desa
     <Compile Include="F1naticStoreDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>F1naticStoreDataSet.xsd</DependentUpon>
-=======
-    <Compile Include="frmUsuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmUsuarios.Designer.cs">
-      <DependentUpon>frmUsuarios.cs</DependentUpon>
-//>>>>>>> desarrollo_gp
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -82,9 +72,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmUsuarios.resx">
-      <DependentUpon>frmUsuarios.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -126,13 +113,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EntidadCapa\EntidadCapa.csproj">
-      <Project>{39f5843e-739b-4462-b59e-2bb4b87b8246}</Project>
-      <Name>EntidadCapa</Name>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{4aec0857-b842-4b99-985f-30ea832a32e2}</Project>
+      <Name>CapaEntidad</Name>
     </ProjectReference>
-    <ProjectReference Include="..\NegocioCapa\NegocioCapa.csproj">
-      <Project>{1567f4f9-05f9-42b4-89d3-a14aa4468ab2}</Project>
-      <Name>NegocioCapa</Name>
+    <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
+      <Project>{ca7d4777-ef5f-4a7e-bd16-1846a4b417b4}</Project>
+      <Name>CapaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
