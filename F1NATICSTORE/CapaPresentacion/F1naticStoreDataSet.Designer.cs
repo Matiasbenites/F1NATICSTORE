@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace F1NATICSTORE {
+namespace CapaPresentacion {
     
     
     /// <summary>
@@ -6541,7 +6541,7 @@ namespace F1NATICSTORE {
         }
     }
 }
-namespace F1NATICSTORE.F1naticStoreDataSetTableAdapters {
+namespace CapaPresentacion.F1naticStoreDataSetTableAdapters {
     
     
     /// <summary>
@@ -6710,7 +6710,7 @@ SELECT IdCategoria, Descripcion, Estado, FechaCreacion FROM Categoria WHERE (IdC
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::F1NATICSTORE.Properties.Settings.Default.F1naticStoreConnectionString;
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.F1naticStoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7115,7 +7115,7 @@ SELECT IdCliente, Documento, NombreCompleto, Correo, Telefono, Estado, FechaCrea
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::F1NATICSTORE.Properties.Settings.Default.F1naticStoreConnectionString;
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.F1naticStoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7595,7 +7595,7 @@ SELECT IdCompra, IdUsuario, IdProveedor, TipoDocumento, NumeroDocumento, MontoTo
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::F1NATICSTORE.Properties.Settings.Default.F1naticStoreConnectionString;
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.F1naticStoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8008,7 +8008,7 @@ SELECT IdDetalleCompra, IdCompra, IdProducto, PrecioCompra, PrecioVenta, Cantida
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::F1NATICSTORE.Properties.Settings.Default.F1naticStoreConnectionString;
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.F1naticStoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8396,7 +8396,7 @@ SELECT IdDetalleVenta, IdVenta, IdProducto, PrecioVenta, Cantidad, SubTotal, Fec
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::F1NATICSTORE.Properties.Settings.Default.F1naticStoreConnectionString;
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.F1naticStoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8753,7 +8753,7 @@ SELECT IdPermiso, IdRol, NombreMenu, FechaCreacion FROM Permiso WHERE (IdPermiso
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::F1NATICSTORE.Properties.Settings.Default.F1naticStoreConnectionString;
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.F1naticStoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9147,7 +9147,7 @@ SELECT IdProducto, Codigo, Nombre, Descripcion, IdCategoria, Stock, PrecioCompra
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::F1NATICSTORE.Properties.Settings.Default.F1naticStoreConnectionString;
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.F1naticStoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9660,7 +9660,7 @@ SELECT IdProveedor, Documento, RazonSocial, Correo, Telefono, Estado, FechaCreac
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::F1NATICSTORE.Properties.Settings.Default.F1naticStoreConnectionString;
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.F1naticStoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10123,7 +10123,7 @@ SELECT IdRol, Descripcion, FechaCreacion FROM Rol WHERE (IdRol = @IdRol)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::F1NATICSTORE.Properties.Settings.Default.F1naticStoreConnectionString;
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.F1naticStoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10501,7 +10501,7 @@ SELECT IdUsuario, Documento, NombreCompleto, Correo, Clave, IdRol, Estado, Fecha
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::F1NATICSTORE.Properties.Settings.Default.F1naticStoreConnectionString;
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.F1naticStoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11012,7 +11012,7 @@ SELECT IdVenta, IdUsuario, TipoDocumento, NumeroDocumento, DocumentoCliente, Nom
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::F1NATICSTORE.Properties.Settings.Default.F1naticStoreConnectionString;
+            this._connection.ConnectionString = global::CapaPresentacion.Properties.Settings.Default.F1naticStoreConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

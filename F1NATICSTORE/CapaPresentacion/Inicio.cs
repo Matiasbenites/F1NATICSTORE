@@ -1,28 +1,118 @@
-﻿using System;
+﻿using CapaEntidad;
+using CapaNegocio;
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.ComponentModel;
 using System.Windows.Forms;
+using FontAwesome.Sharp;
 
-namespace F1NATICSTORE
+
+namespace CapaPresentacion
 {
     public partial class Inicio : Form
     {
-        public Inicio()
+        private static Usuario usuarioActual; // estático para mantener su valor durante la ejecución del proyecto
+        private static IconMenuItem menuActivo = null;
+        private static Form formActivo = null;
+        public Inicio(Usuario objusuario)
         {
+            usuarioActual = objusuario; // USUARIO LOGEADO
+
             InitializeComponent();
         }
-
-        private void contenedor_Paint(object sender, PaintEventArgs e)
+        private void Inicio_Load(object sender, EventArgs e)
         {
+            List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);   // Recibe el usuario logeado para listar sus permisos
+
+
+            lblUsuario.Text = usuarioActual.NombreCompleto;
 
         }
-
         private void menuSalir_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
 
+
+        private void AbrirFormulario(IconMenuItem menu, Form formulario)
+        {
+            if(menuActivo != null)
+            {
+                menuActivo.BackColor = Color.FromArgb(31, 30, 68);
+            }
+            menu.BackColor = Color.FromArgb(37, 36, 81);
+            menuActivo = menu;
+
+            if (formActivo != null)
+            {
+                formActivo.Close();
+            }
+            formActivo = formulario; // Guardar el formulario activo
+            formulario.TopLevel = false; // Indicar que no es un formulario principal
+            formulario.FormBorderStyle = FormBorderStyle.None; // Quitar bordes
+            formulario.Dock = DockStyle.Fill; // Llenar el contenedor
+            formulario.BackColor = Color.FromArgb(34, 33, 74); // Cambiar color de fondo
+            contenedor.Controls.Add(formulario); // Agregar al contenedor
+            formulario.Show(); // Mostrar el formulario
         }
 
         private void menuUsuarios_Click(object sender, EventArgs e)
         {
-
+            AbrirFormulario((IconMenuItem)sender, new formUsuarios());
         }
+        private void menuBackup_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new formBackup());
+        }
+        private void menuVentas_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuVentas, new formVentas());
+        }
+        private void submenuRegistrarVenta_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuVentas, new formVentas());
+        }
+        private void submenuDetalleVenta_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuVentas, new formDetalleVenta());
+        }
+        private void menuCompras_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((menuCompras), new formCompras());
+        }
+        private void submenuCompra_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuCompras, new formCompras());
+        }
+        private void submenuDetalleCompra_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuCompras, new formDetalleCompra());
+        }
+        private void menuClientes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new formClientes());
+        }
+        private void menuProductos_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new formProductos());
+        }
+        private void submenuCategoria_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuProductos, new formCategoria());
+        }
+        private void submenuProducto_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuProductos, new formProductos());
+        }
+        private void menuReportes_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new formReportes());
+        }
+
     }
 }

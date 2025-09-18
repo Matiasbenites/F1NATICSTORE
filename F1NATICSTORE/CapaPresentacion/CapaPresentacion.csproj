@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0E763710-D285-4D55-9B41-E0FD472A6939}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>F1NATICSTORE</RootNamespace>
-    <AssemblyName>F1NATICSTORE</AssemblyName>
+    <RootNamespace>CapaPresentacion</RootNamespace>
+    <AssemblyName>CapaPresentacion</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>F1NATICSTORE.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="FontAwesome.Sharp, Version=6.6.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
@@ -58,6 +61,66 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>F1naticStoreDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="formBackup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formBackup.Designer.cs">
+      <DependentUpon>formBackup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCategoria.Designer.cs">
+      <DependentUpon>formCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formClientes.Designer.cs">
+      <DependentUpon>formClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formCompras.Designer.cs">
+      <DependentUpon>formCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDetalleCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDetalleCompra.Designer.cs">
+      <DependentUpon>formDetalleCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDetalleVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDetalleVenta.Designer.cs">
+      <DependentUpon>formDetalleVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formProductos.Designer.cs">
+      <DependentUpon>formProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formReportes.Designer.cs">
+      <DependentUpon>formReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formUsuarios.Designer.cs">
+      <DependentUpon>formUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formVentas.Designer.cs">
+      <DependentUpon>formVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +135,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formBackup.resx">
+      <DependentUpon>formBackup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCategoria.resx">
+      <DependentUpon>formCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formClientes.resx">
+      <DependentUpon>formClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formCompras.resx">
+      <DependentUpon>formCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDetalleCompra.resx">
+      <DependentUpon>formDetalleCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDetalleVenta.resx">
+      <DependentUpon>formDetalleVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formProductos.resx">
+      <DependentUpon>formProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formReportes.resx">
+      <DependentUpon>formReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formUsuarios.resx">
+      <DependentUpon>formUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formVentas.resx">
+      <DependentUpon>formVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +179,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="F1naticStoreDataSet.xsc">
       <DependentUpon>F1naticStoreDataSet.xsd</DependentUpon>

@@ -1,4 +1,4 @@
-﻿namespace F1NATICSTORE
+﻿namespace CapaPresentacion
 {
     partial class Login
     {

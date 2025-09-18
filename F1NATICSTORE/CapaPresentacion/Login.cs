@@ -6,7 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace F1NATICSTORE
+namespace CapaPresentacion
 {
     public partial class Login : Form
     {
@@ -46,7 +46,7 @@ namespace F1NATICSTORE
 
             if (ousuario != null)
             {
-                Inicio formInicio = new Inicio();
+                Inicio formInicio = new Inicio(ousuario);
 
                 formInicio.Show();
                 this.Hide();
