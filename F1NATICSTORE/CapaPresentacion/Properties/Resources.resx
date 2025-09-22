@@ -118,13 +118,58 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="check_40622" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\check_40622.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_racingbulls" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_racingbulls.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_tienda1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_tienda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sitio-en-construccion" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sitio-en-construccion.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_redbull" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_redbull.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_f1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_f1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_mercedez" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_mercedez.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ferrari_frm_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ferrari_frm_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete_40623" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_40623.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ferrari_frm_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ferrari_frm_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_kick" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_kick.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_ferrari" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_ferrari.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_haas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_haas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_alpine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_alpine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_cadillac" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_cadillac.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Logo_Williams" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Logo_Williams.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_tienda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_tienda.htm;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo_aston_martin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_aston_martin.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="check_40622" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\check_40622.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="En-construcción" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\En-construcción.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
