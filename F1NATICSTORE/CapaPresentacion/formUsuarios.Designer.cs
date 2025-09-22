@@ -75,19 +75,19 @@ namespace CapaPresentacion
             // 
             // lblCore
             // 
-            this.lblCore.BackColor = System.Drawing.Color.Black;
-            this.lblCore.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCore.BackColor = System.Drawing.Color.Transparent;
+            this.lblCore.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblCore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
             this.lblCore.Location = new System.Drawing.Point(-2, 0);
             this.lblCore.Name = "lblCore";
-            this.lblCore.Size = new System.Drawing.Size(329, 569);
+            this.lblCore.Size = new System.Drawing.Size(253, 569);
             this.lblCore.TabIndex = 0;
             // 
             // lblDocumento
             // 
             this.lblDocumento.AutoSize = true;
-            this.lblDocumento.BackColor = System.Drawing.Color.Black;
-            this.lblDocumento.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.lblDocumento.BackColor = System.Drawing.Color.Transparent;
+            this.lblDocumento.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblDocumento.Location = new System.Drawing.Point(33, 76);
             this.lblDocumento.Name = "lblDocumento";
             this.lblDocumento.Size = new System.Drawing.Size(82, 13);
@@ -97,8 +97,8 @@ namespace CapaPresentacion
             // lblNombreCompleto
             // 
             this.lblNombreCompleto.AutoSize = true;
-            this.lblNombreCompleto.BackColor = System.Drawing.Color.Black;
-            this.lblNombreCompleto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.lblNombreCompleto.BackColor = System.Drawing.Color.Transparent;
+            this.lblNombreCompleto.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblNombreCompleto.Location = new System.Drawing.Point(33, 126);
             this.lblNombreCompleto.Name = "lblNombreCompleto";
             this.lblNombreCompleto.Size = new System.Drawing.Size(91, 13);
@@ -108,8 +108,8 @@ namespace CapaPresentacion
             // lblCorreo
             // 
             this.lblCorreo.AutoSize = true;
-            this.lblCorreo.BackColor = System.Drawing.Color.Black;
-            this.lblCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.lblCorreo.BackColor = System.Drawing.Color.Transparent;
+            this.lblCorreo.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblCorreo.Location = new System.Drawing.Point(33, 174);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(38, 13);
@@ -119,8 +119,8 @@ namespace CapaPresentacion
             // lblContrasenia
             // 
             this.lblContrasenia.AutoSize = true;
-            this.lblContrasenia.BackColor = System.Drawing.Color.Black;
-            this.lblContrasenia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.lblContrasenia.BackColor = System.Drawing.Color.Transparent;
+            this.lblContrasenia.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblContrasenia.Location = new System.Drawing.Point(33, 222);
             this.lblContrasenia.Name = "lblContrasenia";
             this.lblContrasenia.Size = new System.Drawing.Size(61, 13);
@@ -161,8 +161,8 @@ namespace CapaPresentacion
             // lblConfirmaContrasenia
             // 
             this.lblConfirmaContrasenia.AutoSize = true;
-            this.lblConfirmaContrasenia.BackColor = System.Drawing.Color.Black;
-            this.lblConfirmaContrasenia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.lblConfirmaContrasenia.BackColor = System.Drawing.Color.Transparent;
+            this.lblConfirmaContrasenia.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblConfirmaContrasenia.Location = new System.Drawing.Point(33, 274);
             this.lblConfirmaContrasenia.Name = "lblConfirmaContrasenia";
             this.lblConfirmaContrasenia.Size = new System.Drawing.Size(108, 13);
@@ -180,8 +180,8 @@ namespace CapaPresentacion
             // lblRol
             // 
             this.lblRol.AutoSize = true;
-            this.lblRol.BackColor = System.Drawing.Color.Black;
-            this.lblRol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.lblRol.BackColor = System.Drawing.Color.Transparent;
+            this.lblRol.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblRol.Location = new System.Drawing.Point(33, 322);
             this.lblRol.Name = "lblRol";
             this.lblRol.Size = new System.Drawing.Size(23, 13);
@@ -211,8 +211,8 @@ namespace CapaPresentacion
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.BackColor = System.Drawing.Color.Black;
-            this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.lblEstado.BackColor = System.Drawing.Color.Transparent;
+            this.lblEstado.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblEstado.Location = new System.Drawing.Point(33, 373);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(40, 13);
@@ -221,13 +221,13 @@ namespace CapaPresentacion
             // 
             // btnGuardar
             // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnGuardar.BackColor = System.Drawing.Color.ForestGreen;
             this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.IconChar = FontAwesome.Sharp.IconChar.SdCard;
-            this.btnGuardar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.btnGuardar.IconColor = System.Drawing.Color.White;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 21;
             this.btnGuardar.Location = new System.Drawing.Point(34, 433);
@@ -243,13 +243,13 @@ namespace CapaPresentacion
             // 
             // btnLimpiar
             // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnLimpiar.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
             this.btnLimpiar.IconChar = FontAwesome.Sharp.IconChar.Sync;
-            this.btnLimpiar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.btnLimpiar.IconColor = System.Drawing.Color.White;
             this.btnLimpiar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiar.IconSize = 21;
             this.btnLimpiar.Location = new System.Drawing.Point(34, 471);
@@ -265,13 +265,13 @@ namespace CapaPresentacion
             // 
             // btnEliminar
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnEliminar.BackColor = System.Drawing.Color.Red;
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
             this.btnEliminar.IconChar = FontAwesome.Sharp.IconChar.TrashAlt;
-            this.btnEliminar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.btnEliminar.IconColor = System.Drawing.Color.White;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 21;
             this.btnEliminar.Location = new System.Drawing.Point(34, 509);
@@ -288,9 +288,9 @@ namespace CapaPresentacion
             // lblDetalle_usuario
             // 
             this.lblDetalle_usuario.AutoSize = true;
-            this.lblDetalle_usuario.BackColor = System.Drawing.Color.Black;
+            this.lblDetalle_usuario.BackColor = System.Drawing.Color.Transparent;
             this.lblDetalle_usuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDetalle_usuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.lblDetalle_usuario.ForeColor = System.Drawing.Color.Goldenrod;
             this.lblDetalle_usuario.Location = new System.Drawing.Point(31, 36);
             this.lblDetalle_usuario.Name = "lblDetalle_usuario";
             this.lblDetalle_usuario.Size = new System.Drawing.Size(144, 25);
@@ -300,6 +300,7 @@ namespace CapaPresentacion
             // dgridData
             // 
             this.dgridData.AllowUserToAddRows = false;
+            this.dgridData.BackgroundColor = System.Drawing.SystemColors.Info;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -321,7 +322,7 @@ namespace CapaPresentacion
             this.Rol,
             this.EstadoValor,
             this.Estado});
-            this.dgridData.Location = new System.Drawing.Point(355, 114);
+            this.dgridData.Location = new System.Drawing.Point(261, 126);
             this.dgridData.MultiSelect = false;
             this.dgridData.Name = "dgridData";
             this.dgridData.ReadOnly = true;
@@ -410,11 +411,11 @@ namespace CapaPresentacion
             // 
             // label1
             // 
-            this.label1.BackColor = System.Drawing.Color.IndianRed;
+            this.label1.BackColor = System.Drawing.SystemColors.Info;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(351, 28);
+            this.label1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label1.Location = new System.Drawing.Point(257, 31);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
             this.label1.Size = new System.Drawing.Size(740, 44);
@@ -434,11 +435,12 @@ namespace CapaPresentacion
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(757, 48);
+            this.label2.BackColor = System.Drawing.SystemColors.Info;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label2.Location = new System.Drawing.Point(549, 47);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 25;
             this.label2.Text = "Buscar por:";
             // 
@@ -447,30 +449,30 @@ namespace CapaPresentacion
             this.cboxBusqueda.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.cboxBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxBusqueda.FormattingEnabled = true;
-            this.cboxBusqueda.Location = new System.Drawing.Point(822, 42);
+            this.cboxBusqueda.Location = new System.Drawing.Point(636, 45);
             this.cboxBusqueda.Name = "cboxBusqueda";
             this.cboxBusqueda.Size = new System.Drawing.Size(130, 21);
             this.cboxBusqueda.TabIndex = 26;
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(958, 43);
+            this.txtBusqueda.Location = new System.Drawing.Point(772, 46);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(123, 20);
             this.txtBusqueda.TabIndex = 27;
             // 
             // btnLimpiarBuscador
             // 
-            this.btnLimpiarBuscador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnLimpiarBuscador.BackColor = System.Drawing.Color.Gold;
             this.btnLimpiarBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLimpiarBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnLimpiarBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLimpiarBuscador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.btnLimpiarBuscador.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiarBuscador.IconChar = FontAwesome.Sharp.IconChar.Sync;
-            this.btnLimpiarBuscador.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.btnLimpiarBuscador.IconColor = System.Drawing.Color.Black;
             this.btnLimpiarBuscador.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLimpiarBuscador.IconSize = 21;
-            this.btnLimpiarBuscador.Location = new System.Drawing.Point(1138, 36);
+            this.btnLimpiarBuscador.Location = new System.Drawing.Point(952, 39);
             this.btnLimpiarBuscador.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnLimpiarBuscador.Name = "btnLimpiarBuscador";
             this.btnLimpiarBuscador.Size = new System.Drawing.Size(38, 27);
@@ -480,16 +482,16 @@ namespace CapaPresentacion
             // 
             // btnBuscador
             // 
-            this.btnBuscador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.btnBuscador.BackColor = System.Drawing.Color.Gold;
             this.btnBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscador.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.btnBuscador.ForeColor = System.Drawing.Color.Black;
             this.btnBuscador.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btnBuscador.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
+            this.btnBuscador.IconColor = System.Drawing.Color.Black;
             this.btnBuscador.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnBuscador.IconSize = 21;
-            this.btnBuscador.Location = new System.Drawing.Point(1096, 36);
+            this.btnBuscador.Location = new System.Drawing.Point(910, 39);
             this.btnBuscador.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnBuscador.Name = "btnBuscador";
             this.btnBuscador.Size = new System.Drawing.Size(38, 27);
@@ -511,7 +513,8 @@ namespace CapaPresentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
-            this.ClientSize = new System.Drawing.Size(1226, 569);
+            this.BackgroundImage = global::CapaPresentacion.Properties.Resources.ferrari_frm_user;
+            this.ClientSize = new System.Drawing.Size(1042, 569);
             this.Controls.Add(this.txtIndice);
             this.Controls.Add(this.btnLimpiarBuscador);
             this.Controls.Add(this.btnBuscador);

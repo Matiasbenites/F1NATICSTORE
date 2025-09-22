@@ -32,10 +32,21 @@ namespace CapaPresentacion
         private void InitializeComponent()
         {
             this.menuTitulo = new System.Windows.Forms.MenuStrip();
-            this.label1 = new System.Windows.Forms.Label();
             this.contenedor = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
+            this.menu = new System.Windows.Forms.MenuStrip();
+            this.iconPictureBox9 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox8 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox7 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox6 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox5 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox4 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox3 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.iconAlpine = new FontAwesome.Sharp.IconPictureBox();
+            this.iconWilliams = new FontAwesome.Sharp.IconPictureBox();
             this.menuUsuarios = new FontAwesome.Sharp.IconMenuItem();
             this.menuBackup = new FontAwesome.Sharp.IconMenuItem();
             this.menuVentas = new FontAwesome.Sharp.IconMenuItem();
@@ -50,47 +61,50 @@ namespace CapaPresentacion
             this.submenuProducto = new FontAwesome.Sharp.IconMenuItem();
             this.menuReportes = new FontAwesome.Sharp.IconMenuItem();
             this.menuSalir = new FontAwesome.Sharp.IconMenuItem();
-            this.menu = new System.Windows.Forms.MenuStrip();
+            this.iconPictureBox10 = new FontAwesome.Sharp.IconPictureBox();
             this.menu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconAlpine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconWilliams)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // menuTitulo
             // 
             this.menuTitulo.AutoSize = false;
-            this.menuTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(40)))), ((int)(((byte)(0)))));
+            this.menuTitulo.BackColor = System.Drawing.Color.White;
             this.menuTitulo.Location = new System.Drawing.Point(0, 0);
             this.menuTitulo.Name = "menuTitulo";
             this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(1174, 64);
+            this.menuTitulo.Size = new System.Drawing.Size(1202, 64);
             this.menuTitulo.TabIndex = 1;
             this.menuTitulo.Text = "menuStrip2";
             this.menuTitulo.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuTitulo_ItemClicked);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(40)))), ((int)(((byte)(0)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(467, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "F1NATICSTORE";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // contenedor
             // 
+            this.contenedor.BackColor = System.Drawing.Color.Transparent;
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 137);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1174, 551);
+            this.contenedor.Size = new System.Drawing.Size(1202, 551);
             this.contenedor.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(985, 33);
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(1030, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 4;
@@ -99,11 +113,232 @@ namespace CapaPresentacion
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(1037, 33);
+            this.lblUsuario.BackColor = System.Drawing.Color.White;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.ForeColor = System.Drawing.Color.Red;
+            this.lblUsuario.Location = new System.Drawing.Point(1082, 32);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(51, 13);
+            this.lblUsuario.Size = new System.Drawing.Size(61, 13);
             this.lblUsuario.TabIndex = 5;
             this.lblUsuario.Text = "lblusuario";
+            // 
+            // menu
+            // 
+            this.menu.BackColor = System.Drawing.Color.Silver;
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuUsuarios,
+            this.menuBackup,
+            this.menuVentas,
+            this.menuCompras,
+            this.menuClientes,
+            this.menuProductos,
+            this.menuReportes,
+            this.menuSalir});
+            this.menu.Location = new System.Drawing.Point(0, 64);
+            this.menu.Name = "menu";
+            this.menu.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.menu.Size = new System.Drawing.Size(1202, 73);
+            this.menu.TabIndex = 0;
+            this.menu.Text = "menuStrip1";
+            this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
+            // 
+            // iconPictureBox9
+            // 
+            this.iconPictureBox9.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox9.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_f1;
+            this.iconPictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.iconPictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.iconPictureBox9.ForeColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox9.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox9.IconColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox9.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox9.IconSize = 49;
+            this.iconPictureBox9.Location = new System.Drawing.Point(462, 12);
+            this.iconPictureBox9.Name = "iconPictureBox9";
+            this.iconPictureBox9.Size = new System.Drawing.Size(207, 49);
+            this.iconPictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox9.TabIndex = 15;
+            this.iconPictureBox9.TabStop = false;
+            // 
+            // iconPictureBox8
+            // 
+            this.iconPictureBox8.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox8.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_cadillac;
+            this.iconPictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconPictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.iconPictureBox8.ForeColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox8.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox8.IconColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox8.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox8.IconSize = 49;
+            this.iconPictureBox8.Location = new System.Drawing.Point(923, 12);
+            this.iconPictureBox8.Name = "iconPictureBox8";
+            this.iconPictureBox8.Size = new System.Drawing.Size(52, 49);
+            this.iconPictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox8.TabIndex = 14;
+            this.iconPictureBox8.TabStop = false;
+            // 
+            // iconPictureBox7
+            // 
+            this.iconPictureBox7.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox7.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_racingbulls;
+            this.iconPictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconPictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.iconPictureBox7.ForeColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox7.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox7.IconColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox7.IconSize = 49;
+            this.iconPictureBox7.Location = new System.Drawing.Point(850, 12);
+            this.iconPictureBox7.Name = "iconPictureBox7";
+            this.iconPictureBox7.Size = new System.Drawing.Size(52, 49);
+            this.iconPictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox7.TabIndex = 11;
+            this.iconPictureBox7.TabStop = false;
+            // 
+            // iconPictureBox6
+            // 
+            this.iconPictureBox6.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox6.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_ferrari;
+            this.iconPictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconPictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.iconPictureBox6.ForeColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox6.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox6.IconColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox6.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox6.IconSize = 49;
+            this.iconPictureBox6.Location = new System.Drawing.Point(777, 12);
+            this.iconPictureBox6.Name = "iconPictureBox6";
+            this.iconPictureBox6.Size = new System.Drawing.Size(52, 49);
+            this.iconPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox6.TabIndex = 13;
+            this.iconPictureBox6.TabStop = false;
+            // 
+            // iconPictureBox5
+            // 
+            this.iconPictureBox5.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox5.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_kick;
+            this.iconPictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconPictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.iconPictureBox5.ForeColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox5.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox5.IconColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox5.IconSize = 49;
+            this.iconPictureBox5.Location = new System.Drawing.Point(704, 12);
+            this.iconPictureBox5.Name = "iconPictureBox5";
+            this.iconPictureBox5.Size = new System.Drawing.Size(52, 49);
+            this.iconPictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox5.TabIndex = 12;
+            this.iconPictureBox5.TabStop = false;
+            // 
+            // iconPictureBox4
+            // 
+            this.iconPictureBox4.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox4.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_redbull;
+            this.iconPictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconPictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.iconPictureBox4.ForeColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox4.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox4.IconColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox4.IconSize = 47;
+            this.iconPictureBox4.Location = new System.Drawing.Point(375, 12);
+            this.iconPictureBox4.Name = "iconPictureBox4";
+            this.iconPictureBox4.Size = new System.Drawing.Size(47, 49);
+            this.iconPictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox4.TabIndex = 11;
+            this.iconPictureBox4.TabStop = false;
+            // 
+            // iconPictureBox3
+            // 
+            this.iconPictureBox3.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox3.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_mercedez;
+            this.iconPictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconPictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.iconPictureBox3.ForeColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox3.IconColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox3.IconSize = 49;
+            this.iconPictureBox3.Location = new System.Drawing.Point(302, 12);
+            this.iconPictureBox3.Name = "iconPictureBox3";
+            this.iconPictureBox3.Size = new System.Drawing.Size(52, 49);
+            this.iconPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox3.TabIndex = 10;
+            this.iconPictureBox3.TabStop = false;
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_haas;
+            this.iconPictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconPictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox2.IconSize = 49;
+            this.iconPictureBox2.Location = new System.Drawing.Point(231, 12);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(52, 49);
+            this.iconPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox2.TabIndex = 9;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // iconPictureBox1
+            // 
+            this.iconPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_aston_martin;
+            this.iconPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.iconPictureBox1.ForeColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox1.IconColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox1.IconSize = 49;
+            this.iconPictureBox1.Location = new System.Drawing.Point(159, 12);
+            this.iconPictureBox1.Name = "iconPictureBox1";
+            this.iconPictureBox1.Size = new System.Drawing.Size(52, 49);
+            this.iconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox1.TabIndex = 8;
+            this.iconPictureBox1.TabStop = false;
+            // 
+            // iconAlpine
+            // 
+            this.iconAlpine.BackColor = System.Drawing.Color.White;
+            this.iconAlpine.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_alpine;
+            this.iconAlpine.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconAlpine.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.iconAlpine.ForeColor = System.Drawing.Color.Transparent;
+            this.iconAlpine.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconAlpine.IconColor = System.Drawing.Color.Transparent;
+            this.iconAlpine.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconAlpine.IconSize = 49;
+            this.iconAlpine.Location = new System.Drawing.Point(88, 12);
+            this.iconAlpine.Name = "iconAlpine";
+            this.iconAlpine.Size = new System.Drawing.Size(52, 49);
+            this.iconAlpine.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconAlpine.TabIndex = 7;
+            this.iconAlpine.TabStop = false;
+            // 
+            // iconWilliams
+            // 
+            this.iconWilliams.BackColor = System.Drawing.Color.White;
+            this.iconWilliams.BackgroundImage = global::CapaPresentacion.Properties.Resources.Logo_Williams;
+            this.iconWilliams.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconWilliams.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.iconWilliams.ForeColor = System.Drawing.Color.Transparent;
+            this.iconWilliams.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconWilliams.IconColor = System.Drawing.Color.Transparent;
+            this.iconWilliams.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconWilliams.IconSize = 49;
+            this.iconWilliams.Location = new System.Drawing.Point(12, 12);
+            this.iconWilliams.Name = "iconWilliams";
+            this.iconWilliams.Size = new System.Drawing.Size(52, 49);
+            this.iconWilliams.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconWilliams.TabIndex = 6;
+            this.iconWilliams.TabStop = false;
             // 
             // menuUsuarios
             // 
@@ -294,36 +529,45 @@ namespace CapaPresentacion
             this.menuSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.menuSalir.Click += new System.EventHandler(this.menuSalir_Click);
             // 
-            // menu
+            // iconPictureBox10
             // 
-            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(242)))), ((int)(((byte)(0)))));
-            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuUsuarios,
-            this.menuBackup,
-            this.menuVentas,
-            this.menuCompras,
-            this.menuClientes,
-            this.menuProductos,
-            this.menuReportes,
-            this.menuSalir});
-            this.menu.Location = new System.Drawing.Point(0, 64);
-            this.menu.Name = "menu";
-            this.menu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menu.Size = new System.Drawing.Size(1174, 73);
-            this.menu.TabIndex = 0;
-            this.menu.Text = "menuStrip1";
-            this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
+            this.iconPictureBox10.BackColor = System.Drawing.Color.White;
+            this.iconPictureBox10.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_tienda;
+            this.iconPictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.iconPictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.iconPictureBox10.ForeColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox10.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconPictureBox10.IconColor = System.Drawing.Color.Transparent;
+            this.iconPictureBox10.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconPictureBox10.IconSize = 49;
+            this.iconPictureBox10.Location = new System.Drawing.Point(983, 82);
+            this.iconPictureBox10.Name = "iconPictureBox10";
+            this.iconPictureBox10.Size = new System.Drawing.Size(207, 49);
+            this.iconPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.iconPictureBox10.TabIndex = 16;
+            this.iconPictureBox10.TabStop = false;
             // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(1174, 688);
+            this.ClientSize = new System.Drawing.Size(1202, 688);
+            this.Controls.Add(this.iconPictureBox10);
+            this.Controls.Add(this.iconPictureBox9);
+            this.Controls.Add(this.iconPictureBox8);
+            this.Controls.Add(this.iconPictureBox7);
+            this.Controls.Add(this.iconPictureBox6);
+            this.Controls.Add(this.iconPictureBox5);
+            this.Controls.Add(this.iconPictureBox4);
+            this.Controls.Add(this.iconPictureBox3);
+            this.Controls.Add(this.iconPictureBox2);
+            this.Controls.Add(this.iconPictureBox1);
+            this.Controls.Add(this.iconAlpine);
+            this.Controls.Add(this.iconWilliams);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.contenedor);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menu);
             this.Controls.Add(this.menuTitulo);
             this.ForeColor = System.Drawing.Color.Goldenrod;
@@ -335,6 +579,18 @@ namespace CapaPresentacion
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconAlpine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconWilliams)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,7 +610,6 @@ namespace CapaPresentacion
         }
         #endregion
         private System.Windows.Forms.MenuStrip menuTitulo;
-        private System.Windows.Forms.Label label1;
         private Panel contenedor;
         private Label label2;
         private Label lblUsuario;
@@ -373,6 +628,18 @@ namespace CapaPresentacion
         private MenuStrip menu;
         private FontAwesome.Sharp.IconMenuItem submenuCompra;
         private FontAwesome.Sharp.IconMenuItem submenuDetalleCompra;
+        private FontAwesome.Sharp.IconPictureBox iconWilliams;
+        private FontAwesome.Sharp.IconPictureBox iconAlpine;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox3;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox4;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox5;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox6;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox7;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox8;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox9;
+        private FontAwesome.Sharp.IconPictureBox iconPictureBox10;
     }
 }
 

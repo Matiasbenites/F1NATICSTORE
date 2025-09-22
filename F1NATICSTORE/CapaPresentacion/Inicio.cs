@@ -53,15 +53,15 @@ namespace CapaPresentacion
             }
         }
 
-
+        // Método para abrir formularios dentro del contenedor
         private void AbrirFormulario(IconMenuItem menu, Form formulario)
         {
             if(menuActivo != null)
             {
-                menuActivo.BackColor = Color.FromArgb(255, 242, 0);
+                menuActivo.BackColor = Color.Silver; // Color original del menú
             }
-            menu.BackColor = Color.FromArgb(37, 36, 81);
-            menuActivo = menu;
+            menu.BackColor = Color.Goldenrod; // Color cuando el menú está activo
+            menuActivo = menu; // Guardar el menú activo
 
             if (formActivo != null)
             {
@@ -71,7 +71,7 @@ namespace CapaPresentacion
             formulario.TopLevel = false; // Indicar que no es un formulario principal
             formulario.FormBorderStyle = FormBorderStyle.None; // Quitar bordes
             formulario.Dock = DockStyle.Fill; // Llenar el contenedor
-            formulario.BackColor = Color.FromArgb(34, 33, 74); // Cambiar color de fondo
+            formulario.BackColor = Color.DimGray; // Cambiar color de fondo
             contenedor.Controls.Add(formulario); // Agregar al contenedor
             formulario.Show(); // Mostrar el formulario
         }

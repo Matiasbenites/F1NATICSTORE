@@ -137,6 +137,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Utilidades\OpcionCombo.cs" />
     <EmbeddedResource Include="formBackup.resx">
       <DependentUpon>formBackup.cs</DependentUpon>
@@ -176,14 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="F1naticStoreDataSet.xsc">
       <DependentUpon>F1naticStoreDataSet.xsd</DependentUpon>
     </None>
@@ -227,6 +227,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete_40623.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo_Williams.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_alpine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_aston_martin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_haas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_mercedez.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_redbull.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_kick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_ferrari.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_racingbulls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_cadillac.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_f1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sitio-en-construccion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_tienda.htm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_tienda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\En-construcción.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -14,16 +14,6 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
         private void TDocumento_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Solo números

@@ -267,9 +267,14 @@ namespace CapaPresentacion
 
             if (e.ColumnIndex == 0)
             {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-                var w = Properties.Resources.check_40622.Width; // Tomo el ancho de mi img
-                var h = Properties.Resources.check_40622.Height; // Tomo el alto de mi img
+                // Tamaño máximo permitido (80% del tamaño de la celda)
+                int maxSize = (int)(Math.Min(e.CellBounds.Width, e.CellBounds.Height) * 0.8);
+
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All); // Pintar el fondo y los bordes de la celda
+                int w = Math.Min(Properties.Resources.check_40622.Width, maxSize); // Tomo el ancho de mi img
+                int h = Math.Min(Properties.Resources.check_40622.Height, maxSize); // Tomo el alto de mi img
+                //var w = Properties.Resources.check_40622.Width; // Tomo el ancho de mi img
+                //var h = Properties.Resources.check_40622.Height; // Tomo el alto de mi img
                 var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2; // Dirreción de la imagen dentro del botón
                 var y = e.CellBounds.Top + (e.CellBounds.Width - h) / 2;  // Dirección de la imagen dentro del botón    
 
@@ -279,7 +284,7 @@ namespace CapaPresentacion
 
 
         }
-
+        // Evento para cuando se da click en el botón del DataGridView
         private void dgridData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgridData.Columns[e.ColumnIndex].Name == "btnSeleccionar") // evento para cuando seleccione la celda "seleccionar"
