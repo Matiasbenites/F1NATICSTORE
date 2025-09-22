@@ -40,6 +40,37 @@ namespace CapaPresentacion
         private void btnIngresar_Click(object sender, EventArgs e)
         {
 
+            //---------- Validaciones LOGIN ---------------------------------------
+
+            // Validar que el campo Documento no esté vacío
+            if (string.IsNullOrWhiteSpace(txtDocumento.Text))
+            {
+                MessageBox.Show("El campo Documento es obligatorio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDocumento.Focus();
+                return;
+            }
+            if (!txtDocumento.Text.All(char.IsDigit))
+            {
+                MessageBox.Show("El Documento solo debe contener números.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtDocumento.Focus();
+                return;
+            }
+            // Validar que el campo Clave no esté vacío
+            if (string.IsNullOrWhiteSpace(txtClave.Text))
+            {
+                MessageBox.Show("El campo Clave es obligatorio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtClave.Focus();
+                return;
+            }
+            // Validar que la Clave tenga al menos 6 caracteres
+            if (txtClave.Text.Length < 6)
+            {
+                MessageBox.Show("La Clave debe tener al menos 6 caracteres.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtClave.Focus();
+                return;
+            }
+            // ----------------------Fin Validaciones LOGIN-----------------------
+
             List<Usuario> test = new CN_Usuario().Listar();
 
             Usuario ousuario = new CN_Usuario().Listar().Where(u => u.Documento == txtDocumento.Text && u.Clave == txtClave.Text).FirstOrDefault(); //Expresiones lambda para automatizar la busqueda de un objeto
@@ -55,7 +86,7 @@ namespace CapaPresentacion
             }
             else
             {
-                MessageBox.Show("No se encontro el usuario", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El usuario o la contraseña no coinciden", "Login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

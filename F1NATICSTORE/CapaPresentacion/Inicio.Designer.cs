@@ -61,7 +61,7 @@ namespace CapaPresentacion
             this.menuTitulo.Location = new System.Drawing.Point(0, 0);
             this.menuTitulo.Name = "menuTitulo";
             this.menuTitulo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuTitulo.Size = new System.Drawing.Size(1171, 64);
+            this.menuTitulo.Size = new System.Drawing.Size(1174, 64);
             this.menuTitulo.TabIndex = 1;
             this.menuTitulo.Text = "menuStrip2";
             this.menuTitulo.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuTitulo_ItemClicked);
@@ -84,13 +84,13 @@ namespace CapaPresentacion
             this.contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.contenedor.Location = new System.Drawing.Point(0, 137);
             this.contenedor.Name = "contenedor";
-            this.contenedor.Size = new System.Drawing.Size(1171, 612);
+            this.contenedor.Size = new System.Drawing.Size(1174, 551);
             this.contenedor.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1013, 33);
+            this.label2.Location = new System.Drawing.Point(985, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 13);
             this.label2.TabIndex = 4;
@@ -99,7 +99,7 @@ namespace CapaPresentacion
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.Location = new System.Drawing.Point(1065, 33);
+            this.lblUsuario.Location = new System.Drawing.Point(1037, 33);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(51, 13);
             this.lblUsuario.TabIndex = 5;
@@ -159,7 +159,7 @@ namespace CapaPresentacion
             this.submenuRegistrarVenta.IconColor = System.Drawing.Color.Black;
             this.submenuRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuRegistrarVenta.Name = "submenuRegistrarVenta";
-            this.submenuRegistrarVenta.Size = new System.Drawing.Size(180, 22);
+            this.submenuRegistrarVenta.Size = new System.Drawing.Size(152, 22);
             this.submenuRegistrarVenta.Text = "Registrar Venta";
             this.submenuRegistrarVenta.Click += new System.EventHandler(this.submenuRegistrarVenta_Click);
             // 
@@ -169,7 +169,7 @@ namespace CapaPresentacion
             this.submenuDetalleVenta.IconColor = System.Drawing.Color.Black;
             this.submenuDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuDetalleVenta.Name = "submenuDetalleVenta";
-            this.submenuDetalleVenta.Size = new System.Drawing.Size(180, 22);
+            this.submenuDetalleVenta.Size = new System.Drawing.Size(152, 22);
             this.submenuDetalleVenta.Text = "Ver Detalle";
             this.submenuDetalleVenta.Click += new System.EventHandler(this.submenuDetalleVenta_Click);
             // 
@@ -197,7 +197,7 @@ namespace CapaPresentacion
             this.submenuCompra.IconColor = System.Drawing.Color.Black;
             this.submenuCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuCompra.Name = "submenuCompra";
-            this.submenuCompra.Size = new System.Drawing.Size(180, 22);
+            this.submenuCompra.Size = new System.Drawing.Size(129, 22);
             this.submenuCompra.Text = "Registrar";
             this.submenuCompra.Click += new System.EventHandler(this.submenuCompra_Click);
             // 
@@ -207,7 +207,7 @@ namespace CapaPresentacion
             this.submenuDetalleCompra.IconColor = System.Drawing.Color.Black;
             this.submenuDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuDetalleCompra.Name = "submenuDetalleCompra";
-            this.submenuDetalleCompra.Size = new System.Drawing.Size(180, 22);
+            this.submenuDetalleCompra.Size = new System.Drawing.Size(129, 22);
             this.submenuDetalleCompra.Text = "Ver Detalle";
             this.submenuDetalleCompra.Click += new System.EventHandler(this.submenuDetalleCompra_Click);
             // 
@@ -309,7 +309,7 @@ namespace CapaPresentacion
             this.menu.Location = new System.Drawing.Point(0, 64);
             this.menu.Name = "menu";
             this.menu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.menu.Size = new System.Drawing.Size(1171, 73);
+            this.menu.Size = new System.Drawing.Size(1174, 73);
             this.menu.TabIndex = 0;
             this.menu.Text = "menuStrip1";
             this.menu.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menu_ItemClicked);
@@ -319,7 +319,7 @@ namespace CapaPresentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(1171, 749);
+            this.ClientSize = new System.Drawing.Size(1174, 688);
             this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.contenedor);
@@ -331,7 +331,7 @@ namespace CapaPresentacion
             this.Name = "Inicio";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "F1NATICSTORE Punto de Venta";
             this.Load += new System.EventHandler(this.Inicio_Load);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();

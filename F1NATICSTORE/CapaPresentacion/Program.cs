@@ -1,10 +1,10 @@
-﻿using System;
+﻿using CapaPresentacion;
+using System;
 using System.Windows.Forms;
-using CapaPresentacion;
 
 namespace F1NATICSTORE
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.

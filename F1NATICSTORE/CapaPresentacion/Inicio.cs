@@ -19,23 +19,38 @@ namespace CapaPresentacion
         private static Usuario usuarioActual; // estático para mantener su valor durante la ejecución del proyecto
         private static IconMenuItem menuActivo = null;
         private static Form formActivo = null;
-        public Inicio(Usuario objusuario)
+        public Inicio(Usuario objusuario = null)
         {
-            usuarioActual = objusuario; // USUARIO LOGEADO
+            //if (objusuario == null)
+            //    usuarioActual = new Usuario() { NombreCompleto = "ADMIN PREDEFINIDO", IdUsuario = 1 };
+            //else
+                usuarioActual = objusuario; // USUARIO LOGEADO
 
             InitializeComponent();
         }
         private void Inicio_Load(object sender, EventArgs e)
-        {
+        {   
             List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);   // Recibe el usuario logeado para listar sus permisos
 
+            foreach (IconMenuItem iconmenu in menu.Items)
+            {
+                bool encontrado = ListaPermisos.Any(m => m.NombreMenu == iconmenu.Name);
+
+                if (!encontrado)
+                {
+                    iconmenu.Visible = false; // se oculta el menu encontrado
+                }
+            }
 
             lblUsuario.Text = usuarioActual.NombreCompleto;
 
         }
         private void menuSalir_Click(object sender, EventArgs e)
         {
+            if(MessageBox.Show("¿Esta seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // Pregunta de confirmación
+            {
             this.Close();
+            }
         }
 
 
@@ -43,7 +58,7 @@ namespace CapaPresentacion
         {
             if(menuActivo != null)
             {
-                menuActivo.BackColor = Color.FromArgb(31, 30, 68);
+                menuActivo.BackColor = Color.FromArgb(255, 242, 0);
             }
             menu.BackColor = Color.FromArgb(37, 36, 81);
             menuActivo = menu;

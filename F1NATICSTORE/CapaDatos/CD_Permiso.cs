@@ -26,7 +26,9 @@ namespace CapaDatos
                     query.AppendLine("INNER JOIN ROL r on r.IdRol = p.IdRol");
                     query.AppendLine("INNER JOIN USUARIO u on u.IdRol = r.IdRol");
                     query.AppendLine("WHERE u.IdUsuario = @idusuario");
-
+                    //query.AppendLine("SELECT p.IdRol, p.NombreMenu FROM PERMISO p");
+                    //query.AppendLine("WHERE p.IdRol = (SELECT IdRol FROM USUARIO WHERE IdUsuario = @idusuario)");
+                                                                
                     SqlCommand cmd = new SqlCommand(query.ToString(), oconexion);
                     cmd.Parameters.AddWithValue("@idusuario", idusuario); // Reemplaza el parametro de la query
                     cmd.CommandType = CommandType.Text;
