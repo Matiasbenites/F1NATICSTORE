@@ -21,10 +21,10 @@ namespace CapaPresentacion
         private static Form formActivo = null;
         public Inicio(Usuario objusuario = null)
         {
-            //if (objusuario == null)
-            //    usuarioActual = new Usuario() { NombreCompleto = "ADMIN PREDEFINIDO", IdUsuario = 1 };
+            if (objusuario == null)
+               usuarioActual = new Usuario() { NombreCompleto = "ADMIN PREDEFINIDO", IdUsuario = 1 };
             //else
-                usuarioActual = objusuario; // USUARIO LOGEADO
+                //usuarioActual = objusuario; // USUARIO LOGEADO
 
             InitializeComponent();
         }
