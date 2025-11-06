@@ -20,9 +20,15 @@ namespace CapaNegocio
         {
             Mensaje = string.Empty; // Inicializar el mensaje
 
+<<<<<<< HEAD
             if (obj.Descripcion == "") // Validar que la descripción no esté vacía
             {
                 Mensaje += " Es necesario indicar la DESCRIPCION de la Categoria\n";
+=======
+            if (obj.Descripcion == "") // Validar que la descripcion no esté vacío
+            {
+                Mensaje += " Es necesario la descripcion de la Categoria\n";
+>>>>>>> 41d0856d80202121026c5d73399a30ab57738891
             }
 
             if (Mensaje != string.Empty)
@@ -41,9 +47,15 @@ namespace CapaNegocio
         {
             Mensaje = string.Empty; // Inicializar el mensaje
 
+<<<<<<< HEAD
             if (obj.Descripcion == "") // Validar que la descripción no esté vacía
             {
                 Mensaje += " Es necesario indicar la DESCRIPCION de la Categoria\n";
+=======
+            if (obj.Descripcion == "") // Validar que la descripcion no esté vacío
+            {
+                Mensaje += " Es necesario la descripcion de la Categoria\n";
+>>>>>>> 41d0856d80202121026c5d73399a30ab57738891
             }
 
             if (Mensaje != string.Empty)
@@ -63,3 +75,7 @@ namespace CapaNegocio
         }
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 41d0856d80202121026c5d73399a30ab57738891
