@@ -213,5 +213,10 @@ namespace CapaPresentacion
                 row.Visible = true; // Muestra todas las filas
             }
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            Limpiar(); // Llama al método Limpiar para limpiar los campos del formulario
+        }
     } 
 }
