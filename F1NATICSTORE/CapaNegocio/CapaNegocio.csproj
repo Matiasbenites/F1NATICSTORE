@@ -42,10 +42,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CN_Categoria.cs" />
+    <Compile Include="CN_Cliente.cs" />
     <Compile Include="CN_Permiso.cs" />
     <Compile Include="CN_Producto.cs" />
+    <Compile Include="CN_Proveedor.cs" />
     <Compile Include="CN_Rol.cs" />
     <Compile Include="CN_Usuario.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -57,6 +60,20 @@
       <Project>{4aec0857-b842-4b99-985f-30ea832a32e2}</Project>
       <Name>CapaEntidad</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\CapaNegocio.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\CapaNegocio.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

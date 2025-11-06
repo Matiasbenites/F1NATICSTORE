@@ -292,7 +292,7 @@ namespace CapaPresentacion
                     if (row.Visible)
                         dt.Rows.Add(new object[] {
                             row.Cells["Codigo"].Value.ToString(),
-                            row.Cells["Name"].Value.ToString(),
+                            row.Cells["Nombre"].Value.ToString(),
                             row.Cells["Descripcion"].Value.ToString(),
                             row.Cells["Categoria"].Value.ToString(),
                             row.Cells["Stock"].Value.ToString(),

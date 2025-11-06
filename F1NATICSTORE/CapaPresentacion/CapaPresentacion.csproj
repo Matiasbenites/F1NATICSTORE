@@ -100,6 +100,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>F1naticStoreDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="F1naticStoreDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>F1naticStoreDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="formBackup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +165,12 @@
     <Compile Include="formVentas.Designer.cs">
       <DependentUpon>formVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="fromProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fromProveedores.Designer.cs">
+      <DependentUpon>fromProveedores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +183,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -185,6 +197,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="formCategoria.resx">
       <DependentUpon>formCategoria.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="formClientes.resx">
       <DependentUpon>formClientes.cs</DependentUpon>
@@ -210,12 +223,28 @@
     <EmbeddedResource Include="formVentas.resx">
       <DependentUpon>formVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fromProveedores.resx">
+      <DependentUpon>fromProveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.formBackup.resources" />
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.formCategoria.resources" />
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.formClientes.resources" />
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.formCompras.resources" />
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.formDetalleCompra.resources" />
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.formDetalleVenta.resources" />
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.formProductos.resources" />
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.formReportes.resources" />
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.formUsuarios.resources" />
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.formVentas.resources" />
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.Inicio.resources" />
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.Login.resources" />
+    <EmbeddedResource Include="obj\Debug\CapaPresentacion.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
@@ -232,6 +261,28 @@
     <None Include="F1naticStoreDataSet.xss">
       <DependentUpon>F1naticStoreDataSet.xsd</DependentUpon>
     </None>
+    <None Include="F1naticStoreDataSet1.xsc">
+      <DependentUpon>F1naticStoreDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="F1naticStoreDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>F1naticStoreDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="F1naticStoreDataSet1.xss">
+      <DependentUpon>F1naticStoreDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="obj\Debug\CapaDatos.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\CapaEntidad.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\CapaNegocio.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\CapaPresentacion.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -309,6 +360,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\En-construcción.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\CapaDatos.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\CapaEntidad.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\CapaNegocio.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\CapaPresentacion.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\TempPE\F1naticStoreDataSet.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
