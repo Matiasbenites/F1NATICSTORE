@@ -13,16 +13,15 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class formClientes : Form
+    public partial class fromProveedores : Form
     {
-        public formClientes()
+        public fromProveedores()
         {
             InitializeComponent();
         }
 
-        private void formClientes_Load(object sender, EventArgs e)
+        private void fromProveedores_Load(object sender, EventArgs e)
         {
-
             cboxEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" }); // Agrega una opción con valor 1 y texto "Activo"
             cboxEstado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Baja" }); // Agrega una opción con valor 0 y texto "Baja"
             cboxEstado.DisplayMember = "Texto"; // Establece el miembro de visualización para mostrar el texto
@@ -40,16 +39,16 @@ namespace CapaPresentacion
             cboxBusqueda.ValueMember = "Valor"; // Establece el miembro de valor para obtener el valor seleccionado
             cboxBusqueda.SelectedIndex = 0; // Selecciona la primera opción por defecto
 
-            // MOSTRAR TODOS LOS Clientes
-            List<Cliente> lista = new CN_Cliente().Listar(); // Obtiene la lista de roles desde la capa de negocio
+            // MOSTRAR TODOS LOS Proveedores
+            List<Proveedor> lista = new CN_Proveedor().Listar(); // Obtiene la lista de roles desde la capa de negocio
 
-            foreach (Cliente item in lista)
+            foreach (Proveedor item in lista)
             {
                 dgridData.Rows.Add(new object[] {
                 "",
-                item.IdCliente,
+                item.IdProveedor,
                 item.Documento, // Cambia txtDocumento.Text por item.Documento
-                item.NombreCompleto, // Cambia txtNombreCompleto.Text por item.NombreCompleto
+                item.RazonSocial,
                 item.Correo, // Cambia txtCorreo.Text por item.Correo
                 item.Telefono, // Cambia txtContrasenia.Text por item.Telefono
                 item.Estado == true ? "1" : "0", // Asumiendo que Estado es bool
@@ -62,7 +61,7 @@ namespace CapaPresentacion
         {
             string Mensaje = string.Empty; // Variable para almacenar mensajes
 
-            // ------------ Validaciones Cliente ----------------------
+            // ------------ Validaciones Proveedor ----------------------
 
             // Validar que el campo Documento no esté vacío
             if (string.IsNullOrWhiteSpace(txtDocumento.Text))
@@ -79,18 +78,11 @@ namespace CapaPresentacion
                 return;
             }
 
-            // Validar que el campo Nombre Completo no esté vacío
-            if (string.IsNullOrWhiteSpace(txtNombreCompleto.Text))
+            // Validar que el campo Razon Social no esté vacío
+            if (string.IsNullOrWhiteSpace(txtRazonSocial.Text))
             {
-                MessageBox.Show("El campo Nombre Completo es obligatorio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtNombreCompleto.Focus();
-                return;
-            }
-            // Validar que el campo Nombre Completo solo contenga letras y espacios
-            if (!txtNombreCompleto.Text.All(c => char.IsLetter(c) || char.IsWhiteSpace(c)))
-            {
-                MessageBox.Show("El Nombre Completo solo debe contener letras y espacios.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtNombreCompleto.Focus();
+                MessageBox.Show("El campo Razon Social es obligatorio.", "Validación", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtRazonSocial.Focus();
                 return;
             }
             // Validar que el campo Correo no esté vacío
@@ -108,22 +100,22 @@ namespace CapaPresentacion
                 return;
             }
 
-            // ------------ Fin Validaciones Cliente ----------------------
+            // ------------ Fin Validaciones proveedores ----------------------
 
 
-            Cliente obj = new Cliente() // Crear una instancia de cliente
+                Proveedor obj = new Proveedor() // Crear una instancia de proveedores
             {
-                IdCliente = Convert.ToInt32(txtId.Text), // Convertir el texto a entero
+                IdProveedor = Convert.ToInt32(txtId.Text), // Convertir el texto a entero
                 Documento = txtDocumento.Text, // Asignar el texto del TextBox
-                NombreCompleto = txtNombreCompleto.Text,
+                RazonSocial = txtRazonSocial.Text,
                 Correo = txtCorreo.Text,
                 Telefono = txtTelefono.Text,
                 Estado = Convert.ToInt32(((OpcionCombo)cboxEstado.SelectedItem).Valor) == 1 ? true : false // Convertir el valor seleccionado a booleano
             };
 
-            if (obj.IdCliente == 0)
+            if (obj.IdProveedor == 0)
             {
-                int idgenerado = new CN_Cliente().Registrar(obj, out Mensaje); // Llamar al método Registrar y obtener el ID generado y el mensaje
+                int idgenerado = new CN_Proveedor().Registrar(obj, out Mensaje); // Llamar al método Registrar y obtener el ID generado y el mensaje
 
 
                 if (idgenerado != 0) // Si el ID generado es diferente de 0, la operación fue exitosa
@@ -133,12 +125,12 @@ namespace CapaPresentacion
                 "",
                 idgenerado,
                 txtDocumento.Text,
-                txtNombreCompleto.Text,
+                txtRazonSocial.Text,
                 txtCorreo.Text,
                 txtTelefono.Text,
                 ((OpcionCombo)cboxEstado.SelectedItem).Valor.ToString(),
                 ((OpcionCombo)cboxEstado.SelectedItem).Texto.ToString()
-            });
+                 });
                     Limpiar(); // Limpiar los campos del formulario
                 }
                 else // Si el ID generado es 0, nos dio un error
@@ -148,14 +140,14 @@ namespace CapaPresentacion
             }
             else
             {
-                bool Resultado = new CN_Cliente().Editar(obj, out Mensaje); // Llamar al método Editar y obtener el resultado y el mensaje
+                bool Resultado = new CN_Proveedor().Editar(obj, out Mensaje); // Llamar al método Editar y obtener el resultado y el mensaje
 
                 if (Resultado)
                 {
                     DataGridViewRow row = dgridData.Rows[Convert.ToInt32(txtIndice.Text)]; // Obtener la fila seleccionada en el DataGridView
                     row.Cells["Id"].Value = txtId.Text;
                     row.Cells["Documento"].Value = txtDocumento.Text;
-                    row.Cells["NombreCompleto"].Value = txtNombreCompleto.Text;
+                    row.Cells["RazonSocial"].Value = txtRazonSocial.Text;
                     row.Cells["Correo"].Value = txtCorreo.Text;
                     row.Cells["Telefono"].Value = txtTelefono.Text;
                     row.Cells["EstadoValor"].Value = ((OpcionCombo)cboxEstado.SelectedItem).Valor.ToString();
@@ -168,14 +160,14 @@ namespace CapaPresentacion
                     MessageBox.Show(Mensaje); // Mostrar el mensaje de error
                 }
             }
-
         }
-    private void Limpiar()
+       
+        private void Limpiar()
         { // Limpiar los campos del formulario
             txtIndice.Text = "-1";
             txtId.Text = "0";
             txtDocumento.Text = "";
-            txtNombreCompleto.Text = "";
+            txtRazonSocial.Text = "";
             txtCorreo.Text = "";
             txtTelefono.Text = "";
             cboxEstado.SelectedIndex = 0;
@@ -215,7 +207,7 @@ namespace CapaPresentacion
                     txtIndice.Text = indice.ToString();
                     txtId.Text = dgridData.Rows[indice].Cells["Id"].Value.ToString(); // Internamente va recuperar el ID de la fila seleccionada en el item superior del form
                     txtDocumento.Text = dgridData.Rows[indice].Cells["Documento"].Value.ToString();
-                    txtNombreCompleto.Text = dgridData.Rows[indice].Cells["NombreCompleto"].Value.ToString();
+                    txtRazonSocial.Text = dgridData.Rows[indice].Cells["RazonSocial"].Value.ToString();
                     txtCorreo.Text = dgridData.Rows[indice].Cells["Correo"].Value.ToString();
                     txtTelefono.Text = dgridData.Rows[indice].Cells["Telefono"].Value.ToString();
 
@@ -237,14 +229,14 @@ namespace CapaPresentacion
         {
             if (Convert.ToInt32(txtId.Text) != 0)
             {
-                if (MessageBox.Show($"¿Desea eliminar el Cliente {txtNombreCompleto.Text}?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show($"¿Desea eliminar al proveedor?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     string Mensaje = string.Empty; // Variable para almacenar mensajes
-                    Cliente obj = new Cliente() // Crear una instancia de Cliente
+                    Proveedor obj = new Proveedor() // Crear una instancia de Cliente
                     {
-                        IdCliente = Convert.ToInt32(txtId.Text), // Convertir el texto a entero
+                        IdProveedor = Convert.ToInt32(txtId.Text), // Convertir el texto a entero
                     };
-                    bool respuesta = new CN_Cliente().Eliminar(obj, out Mensaje); // Llamar al método Eliminar y obtener el resultado y el mensaje
+                    bool respuesta = new CN_Proveedor().Eliminar(obj, out Mensaje); // Llamar al método Eliminar y obtener el resultado y el mensaje
 
                     if (respuesta) // Si la respuesta es verdadera, la operación fue exitosa
                     {
@@ -278,6 +270,7 @@ namespace CapaPresentacion
 
         private void btnLimpiarBuscador_Click(object sender, EventArgs e)
         {
+
             txtBusqueda.Text = ""; // Limpia el texto de búsqueda
             foreach (DataGridViewRow row in dgridData.Rows) // Recorre cada fila del DataGridView
             {
@@ -289,6 +282,5 @@ namespace CapaPresentacion
         {
             Limpiar(); // Llama al método Limpiar para limpiar los campos del formulario
         }
-    } 
-
+    }
 }

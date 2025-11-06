@@ -21,15 +21,15 @@ namespace CapaPresentacion
         private static Form formActivo = null;
         public Inicio(Usuario objusuario = null)
         {
-            //if (objusuario == null)
-            //    usuarioActual = new Usuario() { NombreCompleto = "ADMIN PREDEFINIDO", IdUsuario = 1 };
+            if (objusuario == null)
+                usuarioActual = new Usuario() { NombreCompleto = "ADMIN PREDEFINIDO", IdUsuario = 1 };
             //else
-                usuarioActual = objusuario; // USUARIO LOGEADO
+            //usuarioActual = objusuario; // USUARIO LOGEADO
 
             InitializeComponent();
         }
         private void Inicio_Load(object sender, EventArgs e)
-        {   
+        {
             List<Permiso> ListaPermisos = new CN_Permiso().Listar(usuarioActual.IdUsuario);   // Recibe el usuario logeado para listar sus permisos
 
             foreach (IconMenuItem iconmenu in menu.Items)
@@ -47,16 +47,16 @@ namespace CapaPresentacion
         }
         private void menuSalir_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("¿Esta seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // Pregunta de confirmación
+            if (MessageBox.Show("¿Esta seguro que desea salir?", "Salir", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes) // Pregunta de confirmación
             {
-            this.Close();
+                this.Close();
             }
         }
 
         // Método para abrir formularios dentro del contenedor
         private void AbrirFormulario(IconMenuItem menu, Form formulario)
         {
-            if(menuActivo != null)
+            if (menuActivo != null)
             {
                 menuActivo.BackColor = Color.Silver; // Color original del menú
             }
@@ -129,5 +129,9 @@ namespace CapaPresentacion
             AbrirFormulario((IconMenuItem)sender, new formReportes());
         }
 
+        private void iconProveedores_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario((IconMenuItem)sender, new fromProveedores());
+        }
     }
 }
