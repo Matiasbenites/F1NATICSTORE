@@ -1,6 +1,7 @@
 ﻿using CapaEntidad;
 using CapaNegocio;
 using CapaPresentacion.Utilidades;
+using ClosedXML.Excel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -266,6 +267,61 @@ namespace CapaPresentacion
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             Limpiar(); // Llama al método Limpiar para limpiar los campos del formulario
+        }
+
+        private void btnExportar_Click(object sender, EventArgs e)
+        {
+            if (dgridData.Rows.Count <1)// como no hay datos no se puede exportar el archivo
+            {
+                MessageBox.Show("No hay datos para exportar.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+               DataTable dt = new DataTable();//inserto todas las cabeceras en el excel
+
+               foreach (DataGridViewColumn column in dgridData.Columns)//accedo a cada una de las columnas que tengan encabezado
+               {
+                   if (column.HeaderText != "" && column.Visible)
+                   {
+                       dt.Columns.Add(column.HeaderText, typeof(string)); // Agrega las columnas visibles al DataTable
+                   }
+                }
+
+               foreach (DataGridViewRow row in dgridData.Rows)//recorro todas las filas del datagridview
+                {
+                    if (row.Visible)
+                        dt.Rows.Add(new object[] {
+                            row.Cells["Codigo"].Value.ToString(),
+                            row.Cells["Name"].Value.ToString(),
+                            row.Cells["Descripcion"].Value.ToString(),
+                            row.Cells["Categoria"].Value.ToString(),
+                            row.Cells["Stock"].Value.ToString(),
+                            row.Cells["PrecioCompra"].Value.ToString(),
+                            row.Cells["PrecioVenta"].Value.ToString(),
+                            row.Cells["Estado"].Value.ToString()
+
+                        });
+                }
+               SaveFileDialog saveFile = new SaveFileDialog();//creo el cuadro de dialogo para guardar el archivo
+                saveFile.FileName = string.Format("ReporteProductos_{0}.xlsx", DateTime.Now.ToString("ddMMyyyyHHmmss"));//nombre del archivo
+                saveFile.Filter = "Excel Files | *.xlsx";//tipo de archivo
+
+                if (saveFile.ShowDialog() == DialogResult.OK)//si el usuario presiona ok
+                {
+                    try
+                    {
+                        XLWorkbook wb = new XLWorkbook(); //creo el libro de excel
+                        var hoja = wb.Worksheets.Add(dt, "Informe"); //agrego una hoja al libro
+                        hoja.ColumnsUsed().AdjustToContents(); //ajusto el tamaño de las columnas al contenido
+                        wb.SaveAs(saveFile.FileName); //guardo el archivo
+                        MessageBox.Show("Reporte generado correctamente", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Error al generar el reporte: ", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+                }
+            }
         }
     }
 }
