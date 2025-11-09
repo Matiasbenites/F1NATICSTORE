@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Factura - F1NATIC STORE</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        .header, .footer {
+            width: 100%;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 26px;
+            color: #d32f2f;
+        }
+        .header h2 {
+            margin: 0;
+            font-size: 16px;
+        }
+        .info-table, .productos, .totales {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .info-table td {
+            border: none;
+            padding: 5px;
+            font-size: 14px;
+        }
+        .productos th, .productos td {
+            border: 1px solid #000;
+            padding: 6px;
+            font-size: 14px;
+            text-align: center;
+        }
+        .productos th {
+            background-color: #e0e0e0;
+        }
+        .totales td {
+            border: none;
+            padding: 6px;
+            font-size: 14px;
+        }
+        .totales td.label {
+            text-align: right;
+            font-weight: bold;
+        }
+        .totales td.value {
+            text-align: right;
+            border-top: 1px solid #000;
+        }
+        .footer {
+            font-size: 12px;
+            margin-top: 30px;
+            color: #555;
+        }
+        .right {
+            text-align: right;
+        }
+        .border-box {
+            border: 2px solid #000;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header border-box">
+        <h1>F1NATIC STORE</h1>
+        <h2>Factura / Comprobante de Venta</h2>
+        <p>CUIT: 30-99999999-9 | IVA Responsable Inscripto<br>
+           Av. Fangio 2025, Corrientes, Argentina<br>
+           Tel: +54 3794 123456 | Email: contacto@f1naticstore.com</p>
+    </div>
+
+    <table class="info-table">
+        <tr>
+            <td><strong>Tipo Comprobante:</strong> Factura B</td>
+            <td><strong>N° Comprobante:</strong> 0001-00001234</td>
+            <td><strong>Fecha Emisión:</strong> 09/11/2025</td>
+        </tr>
+        <tr>
+            <td><strong>Cliente:</strong> Juan Pérez</td>
+            <td><strong>CUIT/DNI:</strong> 20-12345678-3</td>
+            <td><strong>Condición IVA:</strong> Consumidor Final</td>
+        </tr>
+        <tr>
+            <td colspan="3"><strong>Dirección:</strong> Av. San Martín 850, Corrientes</td>
+        </tr>
+    </table>
+
+    <table class="productos">
+        <tr>
+            <th>Código</th>
+            <th>Descripción</th>
+            <th>Cant.</th>
+            <th>Precio Unitario ($)</th>
+            <th>IVA (%)</th>
+            <th>Subtotal ($)</th>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Gorra Red Bull Racing</td>
+            <td>1</td>
+            <td>25.000,00</td>
+            <td>21%</td>
+            <td>25.000,00</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Remera Ferrari Scuderia</td>
+            <td>2</td>
+            <td>18.000,00</td>
+            <td>21%</td>
+            <td>36.000,00</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>Miniatura Mercedes AMG W15</td>
+            <td>1</td>
+            <td>45.000,00</td>
+            <td>21%</td>
+            <td>45.000,00</td>
+        </tr>
+    </table>
+
+    <table class="totales">
+        <tr>
+            <td class="label">Subtotal:</td>
+            <td class="value">$106.000,00</td>
+        </tr>
+        <tr>
+            <td class="label">IVA (21%):</td>
+            <td class="value">$22.260,00</td>
+        </tr>
+        <tr>
+            <td class="label"><strong>Total:</strong></td>
+            <td class="value"><strong>$128.260,00</strong></td>
+        </tr>
+    </table>
+
+    <div class="footer border-box">
+        <p>“Gracias por su compra” — Tienda oficial de merchandising F1.<br>
+           Este comprobante no tiene validez fiscal. Generado automáticamente por el sistema de ventas F1NATIC STORE.</p>
+    </div>
+
+</body>
+</html>

@@ -46,6 +46,7 @@
     <Compile Include="Compra.cs" />
     <Compile Include="Detalle_Compra.cs" />
     <Compile Include="Detalle_Venta.cs" />
+    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
     <Compile Include="Permiso.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,6 +54,23 @@
     <Compile Include="Rol.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Venta.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\CapaEntidad.dll" />
+    <Content Include="bin\Debug\CapaEntidad.pdb" />
+    <Content Include="obj\Debug\CapaEntidad.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\CapaEntidad.dll" />
+    <Content Include="obj\Debug\CapaEntidad.pdb" />
+    <Content Include="obj\Debug\TempPE\F1NATICSTOREDataSet.Designer.cs.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\CapaEntidad.csproj.AssemblyReference.cache" />
+    <None Include="obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

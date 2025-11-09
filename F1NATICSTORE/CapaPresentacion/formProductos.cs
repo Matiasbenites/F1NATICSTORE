@@ -67,7 +67,7 @@ namespace CapaPresentacion
                     item.Stock,
                     item.PrecioCompra,
                     item.PrecioVenta,
-                    item.Estado == true ? "1" : "0", // Asumiendo que Estado es bool
+                    item.Estado == true ? 1 : 0, // Asumiendo que Estado es bool
                     item.Estado == true ? "Activo" : "Baja"
                 });
             }

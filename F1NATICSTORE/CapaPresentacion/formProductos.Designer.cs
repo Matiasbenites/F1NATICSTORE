@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             FontAwesome.Sharp.IconButton btnExportar;
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBuscador = new FontAwesome.Sharp.IconButton();
             this.dgridData = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -71,11 +71,34 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgridData)).BeginInit();
             this.SuspendLayout();
             // 
+            // btnExportar
+            // 
+            btnExportar.BackColor = System.Drawing.Color.Gold;
+            btnExportar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnExportar.FlatAppearance.BorderSize = 2;
+            btnExportar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnExportar.ForeColor = System.Drawing.Color.Black;
+            btnExportar.IconChar = FontAwesome.Sharp.IconChar.FileCsv;
+            btnExportar.IconColor = System.Drawing.Color.Black;
+            btnExportar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnExportar.IconSize = 25;
+            btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnExportar.Location = new System.Drawing.Point(294, 57);
+            btnExportar.Name = "btnExportar";
+            btnExportar.Size = new System.Drawing.Size(127, 33);
+            btnExportar.TabIndex = 60;
+            btnExportar.Text = "Descargar CSV";
+            btnExportar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            btnExportar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnExportar.UseVisualStyleBackColor = false;
+            btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            // 
             // btnBuscador
             // 
             this.btnBuscador.BackColor = System.Drawing.Color.Gold;
-            this.btnBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnBuscador.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscador.ForeColor = System.Drawing.Color.Black;
             this.btnBuscador.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
@@ -94,15 +117,15 @@
             // 
             this.dgridData.AllowUserToAddRows = false;
             this.dgridData.BackgroundColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(2);
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(2);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgridData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgridData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgridData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.btnSeleccionar,
@@ -121,17 +144,19 @@
             this.dgridData.MultiSelect = false;
             this.dgridData.Name = "dgridData";
             this.dgridData.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Gold;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgridData.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgridData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgridData.RowTemplate.Height = 28;
+            this.dgridData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgridData.Size = new System.Drawing.Size(736, 233);
             this.dgridData.TabIndex = 50;
+            this.dgridData.UseWaitCursor = true;
             this.dgridData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgridData_CellClick);
             this.dgridData.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgridData_CellPainting);
             // 
@@ -218,8 +243,8 @@
             // btnLimpiarBuscador
             // 
             this.btnLimpiarBuscador.BackColor = System.Drawing.Color.Gold;
-            this.btnLimpiarBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnLimpiarBuscador.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.btnLimpiarBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnLimpiarBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarBuscador.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiarBuscador.IconChar = FontAwesome.Sharp.IconChar.Sync;
@@ -240,6 +265,7 @@
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(123, 20);
             this.txtBusqueda.TabIndex = 55;
+            this.txtBusqueda.UseWaitCursor = true;
             // 
             // cboxBusqueda
             // 
@@ -250,6 +276,7 @@
             this.cboxBusqueda.Name = "cboxBusqueda";
             this.cboxBusqueda.Size = new System.Drawing.Size(130, 21);
             this.cboxBusqueda.TabIndex = 54;
+            this.cboxBusqueda.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -262,6 +289,7 @@
             this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 53;
             this.label2.Text = "Buscar por:";
+            this.label2.UseWaitCursor = true;
             // 
             // txtId
             // 
@@ -270,20 +298,24 @@
             this.txtId.Size = new System.Drawing.Size(29, 20);
             this.txtId.TabIndex = 52;
             this.txtId.Text = "0";
+            this.txtId.UseWaitCursor = true;
             this.txtId.Visible = false;
             // 
             // label1
             // 
             this.label1.BackColor = System.Drawing.SystemColors.Info;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.label1.Location = new System.Drawing.Point(281, 31);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(3, 4, 0, 0);
             this.label1.Size = new System.Drawing.Size(740, 68);
             this.label1.TabIndex = 51;
             this.label1.Text = "Lista de Productos";
+            this.label1.UseWaitCursor = true;
             // 
             // txtIndice
             // 
@@ -292,6 +324,7 @@
             this.txtIndice.Size = new System.Drawing.Size(29, 20);
             this.txtIndice.TabIndex = 58;
             this.txtIndice.Text = "-1";
+            this.txtIndice.UseWaitCursor = true;
             this.txtIndice.Visible = false;
             // 
             // lblDetalle_producto
@@ -305,11 +338,12 @@
             this.lblDetalle_producto.Size = new System.Drawing.Size(155, 25);
             this.lblDetalle_producto.TabIndex = 49;
             this.lblDetalle_producto.Text = "Detalle Producto";
+            this.lblDetalle_producto.UseWaitCursor = true;
             // 
             // btnEliminar
             // 
             this.btnEliminar.BackColor = System.Drawing.Color.Red;
-            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
@@ -331,7 +365,7 @@
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLimpiar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
@@ -353,7 +387,7 @@
             // btnGuardar
             // 
             this.btnGuardar.BackColor = System.Drawing.Color.ForestGreen;
-            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardar.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnGuardar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
@@ -382,6 +416,7 @@
             this.lblEstado.Size = new System.Drawing.Size(40, 13);
             this.lblEstado.TabIndex = 45;
             this.lblEstado.Text = "Estado";
+            this.lblEstado.UseWaitCursor = true;
             // 
             // cboxEstado
             // 
@@ -392,6 +427,7 @@
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(149, 21);
             this.cboxEstado.TabIndex = 44;
+            this.cboxEstado.UseWaitCursor = true;
             // 
             // cboCategoria
             // 
@@ -402,6 +438,7 @@
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(149, 21);
             this.cboCategoria.TabIndex = 43;
+            this.cboCategoria.UseWaitCursor = true;
             // 
             // lblRol
             // 
@@ -413,6 +450,7 @@
             this.lblRol.Size = new System.Drawing.Size(52, 13);
             this.lblRol.TabIndex = 42;
             this.lblRol.Text = "Categoria";
+            this.lblRol.UseWaitCursor = true;
             // 
             // txtDescripcion
             // 
@@ -420,6 +458,7 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(149, 20);
             this.txtDescripcion.TabIndex = 38;
+            this.txtDescripcion.UseWaitCursor = true;
             // 
             // txtNombre
             // 
@@ -427,6 +466,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(149, 20);
             this.txtNombre.TabIndex = 37;
+            this.txtNombre.UseWaitCursor = true;
             // 
             // txtCodigo
             // 
@@ -434,6 +474,7 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(149, 20);
             this.txtCodigo.TabIndex = 36;
+            this.txtCodigo.UseWaitCursor = true;
             // 
             // lblCorreo
             // 
@@ -445,6 +486,7 @@
             this.lblCorreo.Size = new System.Drawing.Size(63, 13);
             this.lblCorreo.TabIndex = 34;
             this.lblCorreo.Text = "Descripcion";
+            this.lblCorreo.UseWaitCursor = true;
             // 
             // lblNombreCompleto
             // 
@@ -456,6 +498,7 @@
             this.lblNombreCompleto.Size = new System.Drawing.Size(44, 13);
             this.lblNombreCompleto.TabIndex = 33;
             this.lblNombreCompleto.Text = "Nombre";
+            this.lblNombreCompleto.UseWaitCursor = true;
             // 
             // lbl
             // 
@@ -467,6 +510,7 @@
             this.lbl.Size = new System.Drawing.Size(40, 13);
             this.lbl.TabIndex = 32;
             this.lbl.Text = "Codigo";
+            this.lbl.UseWaitCursor = true;
             // 
             // lblCore
             // 
@@ -477,22 +521,7 @@
             this.lblCore.Name = "lblCore";
             this.lblCore.Size = new System.Drawing.Size(253, 569);
             this.lblCore.TabIndex = 31;
-            // 
-            // btnExportar
-            // 
-            btnExportar.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            btnExportar.IconChar = FontAwesome.Sharp.IconChar.Download;
-            btnExportar.IconColor = System.Drawing.Color.Black;
-            btnExportar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnExportar.IconSize = 20;
-            btnExportar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            btnExportar.Location = new System.Drawing.Point(295, 66);
-            btnExportar.Name = "btnExportar";
-            btnExportar.Size = new System.Drawing.Size(127, 23);
-            btnExportar.TabIndex = 60;
-            btnExportar.Text = "Descargar Excel";
-            btnExportar.UseVisualStyleBackColor = false;
-            btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
+            this.lblCore.UseWaitCursor = true;
             // 
             // formProductos
             // 
@@ -525,6 +554,7 @@
             this.Controls.Add(this.lblCore);
             this.Name = "formProductos";
             this.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
+            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.formProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgridData)).EndInit();
             this.ResumeLayout(false);

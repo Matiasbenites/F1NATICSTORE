@@ -13,12 +13,6 @@ namespace CapaPresentacion
         private TextBox txtId;
         private TextBox txtIndice;
 
-        private DataGridViewButtonColumn btnSeleccionar;
-        private DataGridViewTextBoxColumn Id;
-        private DataGridViewTextBoxColumn Descripcion;
-        private DataGridViewTextBoxColumn EstadoValor;
-        private DataGridViewTextBoxColumn Estado;
-
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -31,11 +25,6 @@ namespace CapaPresentacion
         private void InitializeComponent()
         {
             this.dgridData = new System.Windows.Forms.DataGridView();
-            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtIndice = new System.Windows.Forms.TextBox();
             this.lblDetalle_usuario = new System.Windows.Forms.Label();
@@ -52,6 +41,11 @@ namespace CapaPresentacion
             this.btnLimpiar = new FontAwesome.Sharp.IconButton();
             this.btnGuardar = new FontAwesome.Sharp.IconButton();
             this.btnEliminar = new FontAwesome.Sharp.IconButton();
+            this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgridData)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,41 +71,6 @@ namespace CapaPresentacion
             this.dgridData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgridData_CellContentClick);
             this.dgridData.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgridData_CellPainting);
             // 
-            // btnSeleccionar
-            // 
-            this.btnSeleccionar.HeaderText = "";
-            this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.ReadOnly = true;
-            this.btnSeleccionar.Width = 30;
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            this.Descripcion.Width = 200;
-            // 
-            // EstadoValor
-            // 
-            this.EstadoValor.HeaderText = "EstadoValor";
-            this.EstadoValor.Name = "EstadoValor";
-            this.EstadoValor.ReadOnly = true;
-            this.EstadoValor.Visible = false;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
-            this.Estado.Width = 120;
-            // 
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(150, 72);
@@ -119,6 +78,7 @@ namespace CapaPresentacion
             this.txtId.Size = new System.Drawing.Size(29, 20);
             this.txtId.TabIndex = 3;
             this.txtId.Text = "0";
+            this.txtId.Visible = false;
             // 
             // txtIndice
             // 
@@ -127,6 +87,7 @@ namespace CapaPresentacion
             this.txtIndice.Size = new System.Drawing.Size(25, 20);
             this.txtIndice.TabIndex = 5;
             this.txtIndice.Text = "-1";
+            this.txtIndice.Visible = false;
             // 
             // lblDetalle_usuario
             // 
@@ -187,7 +148,7 @@ namespace CapaPresentacion
             // 
             this.btnBuscador.BackColor = System.Drawing.Color.Gold;
             this.btnBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscador.ForeColor = System.Drawing.Color.Black;
             this.btnBuscador.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
@@ -206,7 +167,7 @@ namespace CapaPresentacion
             // 
             this.btnLimpiarBuscador.BackColor = System.Drawing.Color.Gold;
             this.btnLimpiarBuscador.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLimpiarBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnLimpiarBuscador.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnLimpiarBuscador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiarBuscador.ForeColor = System.Drawing.Color.Black;
             this.btnLimpiarBuscador.IconChar = FontAwesome.Sharp.IconChar.Sync;
@@ -324,6 +285,41 @@ namespace CapaPresentacion
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.HeaderText = "";
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.ReadOnly = true;
+            this.btnSeleccionar.Width = 30;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // EstadoValor
+            // 
+            this.EstadoValor.HeaderText = "EstadoValor";
+            this.EstadoValor.Name = "EstadoValor";
+            this.EstadoValor.ReadOnly = true;
+            this.EstadoValor.Visible = false;
+            // 
+            // Estado
+            // 
+            this.Estado.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
             // formCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -371,5 +367,10 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconButton btnLimpiar;
         private FontAwesome.Sharp.IconButton btnGuardar;
         private FontAwesome.Sharp.IconButton btnEliminar;
+        private DataGridViewButtonColumn btnSeleccionar;
+        private DataGridViewTextBoxColumn Id;
+        private DataGridViewTextBoxColumn Descripcion;
+        private DataGridViewTextBoxColumn EstadoValor;
+        private DataGridViewTextBoxColumn Estado;
     }
 }

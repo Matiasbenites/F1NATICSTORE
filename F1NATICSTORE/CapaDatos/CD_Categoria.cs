@@ -143,7 +143,7 @@ namespace CapaDatos
             {
                 using (SqlConnection oconexion = new SqlConnection(Conexion.cadena)) // Usar using para asegurar el cierre de la conexión
                 {
-                    SqlCommand cmd = new SqlCommand("SP_ELIMINARCategoria", oconexion); // Usar un procedimiento almacenado para la inserción
+                    SqlCommand cmd = new SqlCommand("SP_EliminarCategoria", oconexion); // Usar un procedimiento almacenado para la inserción
                     cmd.Parameters.AddWithValue("IdCategoria", obj.IdCategoria); // Agregar parámetros con AddWithValue
                     cmd.Parameters.Add("Resultado", SqlDbType.Int).Direction = ParameterDirection.Output; // Parámetro de salida para el ID generado
                     cmd.Parameters.Add("Mensaje", SqlDbType.VarChar, 500).Direction = ParameterDirection.Output; // Parámetro de salida para el mensaje

@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class fromProveedores : Form
+    public partial class formProveedores : Form
     {
-        public fromProveedores()
+        public formProveedores()
         {
             InitializeComponent();
         }
