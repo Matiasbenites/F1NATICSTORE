@@ -63,6 +63,7 @@ namespace CapaPresentacion
             this.iconAlpine = new FontAwesome.Sharp.IconPictureBox();
             this.iconWilliams = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox10 = new FontAwesome.Sharp.IconPictureBox();
+            this.submenuNegocio = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox8)).BeginInit();
@@ -270,7 +271,8 @@ namespace CapaPresentacion
             this.menuProductos.AutoSize = false;
             this.menuProductos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.submenuCategoria,
-            this.submenuProducto});
+            this.submenuProducto,
+            this.submenuNegocio});
             this.menuProductos.ForeColor = System.Drawing.Color.Black;
             this.menuProductos.IconChar = FontAwesome.Sharp.IconChar.DollyFlatbed;
             this.menuProductos.IconColor = System.Drawing.Color.Black;
@@ -564,6 +566,13 @@ namespace CapaPresentacion
             this.iconPictureBox10.TabIndex = 16;
             this.iconPictureBox10.TabStop = false;
             // 
+            // submenuNegocio
+            // 
+            this.submenuNegocio.Name = "submenuNegocio";
+            this.submenuNegocio.Size = new System.Drawing.Size(180, 22);
+            this.submenuNegocio.Text = "Negocio";
+            this.submenuNegocio.Click += new System.EventHandler(this.submenuNegocio_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -657,7 +666,12 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconPictureBox iconPictureBox8;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox9;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox10;
+<<<<<<< HEAD
         private FontAwesome.Sharp.IconMenuItem menuProveedores;
+=======
+        private FontAwesome.Sharp.IconMenuItem iconProveedores;
+        private ToolStripMenuItem submenuNegocio;
+>>>>>>> origin/sabrina-branch
     }
 }
 

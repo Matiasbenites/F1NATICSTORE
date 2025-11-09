@@ -174,7 +174,7 @@ namespace CapaPresentacion
                 {
                     txtIndice.Text = indice.ToString();
                     txtId.Text = dgridData.Rows[indice].Cells["Id"].Value.ToString(); // Internamente va recuperar el ID de la fila seleccionada en el item superior del form
-                    txtDescripcion.Text = dgridData.Rows[indice].Cells["Documento"].Value.ToString();
+                    txtDescripcion.Text = dgridData.Rows[indice].Cells["Descripcion"].Value.ToString();
                     // recuperar valor del combobox segun indice de grid seleccionado (ESTADO)
                     foreach (OpcionCombo opc in cboxEstado.Items)
                     {

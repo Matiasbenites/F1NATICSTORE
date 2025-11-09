@@ -109,6 +109,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>F1naticStoreDataSet.xsd</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="F1naticStoreDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>F1naticStoreDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="F1naticStoreDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>F1naticStoreDataSet2.xsd</DependentUpon>
+    </Compile>
+>>>>>>> origin/sabrina-branch
     <Compile Include="formBackup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,7 +182,17 @@
     <Compile Include="formVentas.Designer.cs">
       <DependentUpon>formVentas.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="formProveedores.cs">
+=======
+    <Compile Include="frmNegocio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNegocio.Designer.cs">
+      <DependentUpon>frmNegocio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fromProveedores.cs">
+>>>>>>> origin/sabrina-branch
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formProveedores.Designer.cs">
@@ -239,8 +262,16 @@
     <EmbeddedResource Include="formVentas.resx">
       <DependentUpon>formVentas.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="formProveedores.resx">
       <DependentUpon>formProveedores.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="frmNegocio.resx">
+      <DependentUpon>frmNegocio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fromProveedores.resx">
+      <DependentUpon>fromProveedores.cs</DependentUpon>
+>>>>>>> origin/sabrina-branch
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -284,6 +315,31 @@
     <None Include="F1naticStoreDataSet.xss">
       <DependentUpon>F1naticStoreDataSet.xsd</DependentUpon>
     </None>
+<<<<<<< HEAD
+=======
+    <None Include="F1naticStoreDataSet1.xsc">
+      <DependentUpon>F1naticStoreDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="F1naticStoreDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>F1naticStoreDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="F1naticStoreDataSet1.xss">
+      <DependentUpon>F1naticStoreDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="F1naticStoreDataSet2.xsc">
+      <DependentUpon>F1naticStoreDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="F1naticStoreDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>F1naticStoreDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="F1naticStoreDataSet2.xss">
+      <DependentUpon>F1naticStoreDataSet2.xsd</DependentUpon>
+    </None>
+>>>>>>> origin/sabrina-branch
     <None Include="obj\Debug\CapaDatos.csproj.AssemblyReference.cache" />
     <None Include="obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache" />
     <None Include="obj\Debug\CapaEntidad.csproj.AssemblyReference.cache" />
