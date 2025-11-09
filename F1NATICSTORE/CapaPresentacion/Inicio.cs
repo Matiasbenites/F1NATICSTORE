@@ -133,5 +133,10 @@ namespace CapaPresentacion
         {
             AbrirFormulario((IconMenuItem)sender, new fromProveedores());
         }
+
+        private void submenuNegocio_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario(menuProductos, new frmNegocio());
+        }
     }
 }

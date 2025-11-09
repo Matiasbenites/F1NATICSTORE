@@ -63,6 +63,7 @@ namespace CapaPresentacion
             this.iconAlpine = new FontAwesome.Sharp.IconPictureBox();
             this.iconWilliams = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox10 = new FontAwesome.Sharp.IconPictureBox();
+            this.submenuNegocio = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox8)).BeginInit();
@@ -198,7 +199,7 @@ namespace CapaPresentacion
             this.submenuRegistrarVenta.IconColor = System.Drawing.Color.Black;
             this.submenuRegistrarVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuRegistrarVenta.Name = "submenuRegistrarVenta";
-            this.submenuRegistrarVenta.Size = new System.Drawing.Size(180, 22);
+            this.submenuRegistrarVenta.Size = new System.Drawing.Size(152, 22);
             this.submenuRegistrarVenta.Text = "Registrar Venta";
             this.submenuRegistrarVenta.Click += new System.EventHandler(this.submenuRegistrarVenta_Click);
             // 
@@ -208,7 +209,7 @@ namespace CapaPresentacion
             this.submenuDetalleVenta.IconColor = System.Drawing.Color.Black;
             this.submenuDetalleVenta.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuDetalleVenta.Name = "submenuDetalleVenta";
-            this.submenuDetalleVenta.Size = new System.Drawing.Size(180, 22);
+            this.submenuDetalleVenta.Size = new System.Drawing.Size(152, 22);
             this.submenuDetalleVenta.Text = "Ver Detalle";
             this.submenuDetalleVenta.Click += new System.EventHandler(this.submenuDetalleVenta_Click);
             // 
@@ -236,7 +237,7 @@ namespace CapaPresentacion
             this.submenuCompra.IconColor = System.Drawing.Color.Black;
             this.submenuCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuCompra.Name = "submenuCompra";
-            this.submenuCompra.Size = new System.Drawing.Size(180, 22);
+            this.submenuCompra.Size = new System.Drawing.Size(129, 22);
             this.submenuCompra.Text = "Registrar";
             this.submenuCompra.Click += new System.EventHandler(this.submenuCompra_Click);
             // 
@@ -246,7 +247,7 @@ namespace CapaPresentacion
             this.submenuDetalleCompra.IconColor = System.Drawing.Color.Black;
             this.submenuDetalleCompra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuDetalleCompra.Name = "submenuDetalleCompra";
-            this.submenuDetalleCompra.Size = new System.Drawing.Size(180, 22);
+            this.submenuDetalleCompra.Size = new System.Drawing.Size(129, 22);
             this.submenuDetalleCompra.Text = "Ver Detalle";
             this.submenuDetalleCompra.Click += new System.EventHandler(this.submenuDetalleCompra_Click);
             // 
@@ -270,7 +271,8 @@ namespace CapaPresentacion
             this.menuProductos.AutoSize = false;
             this.menuProductos.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.submenuCategoria,
-            this.submenuProducto});
+            this.submenuProducto,
+            this.submenuNegocio});
             this.menuProductos.ForeColor = System.Drawing.Color.Black;
             this.menuProductos.IconChar = FontAwesome.Sharp.IconChar.DollyFlatbed;
             this.menuProductos.IconColor = System.Drawing.Color.Black;
@@ -564,6 +566,13 @@ namespace CapaPresentacion
             this.iconPictureBox10.TabIndex = 16;
             this.iconPictureBox10.TabStop = false;
             // 
+            // submenuNegocio
+            // 
+            this.submenuNegocio.Name = "submenuNegocio";
+            this.submenuNegocio.Size = new System.Drawing.Size(180, 22);
+            this.submenuNegocio.Text = "Negocio";
+            this.submenuNegocio.Click += new System.EventHandler(this.submenuNegocio_Click);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -658,6 +667,7 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconPictureBox iconPictureBox9;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox10;
         private FontAwesome.Sharp.IconMenuItem iconProveedores;
+        private ToolStripMenuItem submenuNegocio;
     }
 }
 
