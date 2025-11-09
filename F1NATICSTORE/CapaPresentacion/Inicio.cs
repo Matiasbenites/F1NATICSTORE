@@ -86,11 +86,11 @@ namespace CapaPresentacion
         }
         private void menuVentas_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(menuVentas, new formVentas());
+            AbrirFormulario(menuVentas, new formVentas(usuarioActual));
         }
         private void submenuRegistrarVenta_Click(object sender, EventArgs e)
         {
-            AbrirFormulario(menuVentas, new formVentas());
+            AbrirFormulario(menuVentas, new formVentas(usuarioActual));
         }
         private void submenuDetalleVenta_Click(object sender, EventArgs e)
         {

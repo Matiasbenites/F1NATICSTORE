@@ -31,10 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgridData = new System.Windows.Forms.DataGridView();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
-            this.cboxBusqueda = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Documento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +39,10 @@
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EstadoValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.cboxBusqueda = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnLimpiarBuscador = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgridData)).BeginInit();
@@ -92,48 +92,6 @@
             this.dgridData.Size = new System.Drawing.Size(494, 233);
             this.dgridData.TabIndex = 85;
             this.dgridData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgridData_CellDoubleClick);
-            // 
-            // txtBusqueda
-            // 
-            this.txtBusqueda.Location = new System.Drawing.Point(292, 59);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(123, 20);
-            this.txtBusqueda.TabIndex = 89;
-            // 
-            // cboxBusqueda
-            // 
-            this.cboxBusqueda.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.cboxBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboxBusqueda.FormattingEnabled = true;
-            this.cboxBusqueda.Location = new System.Drawing.Point(156, 59);
-            this.cboxBusqueda.Name = "cboxBusqueda";
-            this.cboxBusqueda.Size = new System.Drawing.Size(130, 21);
-            this.cboxBusqueda.TabIndex = 88;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Info;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label2.Location = new System.Drawing.Point(69, 57);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 17);
-            this.label2.TabIndex = 87;
-            this.label2.Text = "Buscar por:";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.Info;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.label1.Size = new System.Drawing.Size(498, 77);
-            this.label1.TabIndex = 86;
-            this.label1.Text = "Lista de Proveedores";
             // 
             // btnSeleccionar
             // 
@@ -194,6 +152,48 @@
             this.Estado.Visible = false;
             this.Estado.Width = 80;
             // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.Location = new System.Drawing.Point(292, 59);
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(123, 20);
+            this.txtBusqueda.TabIndex = 89;
+            // 
+            // cboxBusqueda
+            // 
+            this.cboxBusqueda.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.cboxBusqueda.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxBusqueda.FormattingEnabled = true;
+            this.cboxBusqueda.Location = new System.Drawing.Point(156, 59);
+            this.cboxBusqueda.Name = "cboxBusqueda";
+            this.cboxBusqueda.Size = new System.Drawing.Size(130, 21);
+            this.cboxBusqueda.TabIndex = 88;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.SystemColors.Info;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label2.Location = new System.Drawing.Point(69, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 17);
+            this.label2.TabIndex = 87;
+            this.label2.Text = "Buscar por:";
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.SystemColors.Info;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
+            this.label1.Size = new System.Drawing.Size(498, 77);
+            this.label1.TabIndex = 86;
+            this.label1.Text = "Lista de Proveedores";
+            // 
             // iconButton1
             // 
             this.iconButton1.BackColor = System.Drawing.Color.Gold;
@@ -236,6 +236,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_racingbulls;
             this.ClientSize = new System.Drawing.Size(523, 352);
             this.Controls.Add(this.iconButton1);
             this.Controls.Add(this.dgridData);

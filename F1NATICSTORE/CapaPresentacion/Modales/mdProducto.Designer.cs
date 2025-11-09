@@ -277,6 +277,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::CapaPresentacion.Properties.Resources.logo_racingbulls;
             this.ClientSize = new System.Drawing.Size(528, 347);
             this.Controls.Add(this.ibBuscador);
             this.Controls.Add(this.btnLimpiarBuscador);
@@ -286,6 +287,7 @@
             this.Controls.Add(this.lblListadoProductos);
             this.Controls.Add(this.dgridData);
             this.Name = "mdProducto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mdProducto";
             this.Load += new System.EventHandler(this.mdProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgridData)).EndInit();

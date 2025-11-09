@@ -177,23 +177,16 @@ namespace CapaPresentacion
         // Calcular el total de la compra sumando los subtotales de cada fila
         private void calcularTotal()
         {
-            decimal total = 0m;
+            decimal total = 0;
 
-            foreach (DataGridViewRow fila in dgridRegistrarCompra.Rows)
+            if (dgridRegistrarCompra.Rows.Count > 0)
             {
-                if (fila.IsNewRow) continue;
-
-                var valor = fila.Cells["Subtotal"].Value; // Usar nombre real de la columna
-                if (valor == null || valor == DBNull.Value) continue;
-
-                decimal subtotal;
-                if (decimal.TryParse(Convert.ToString(valor), out subtotal))
+                foreach (DataGridViewRow fila in dgridRegistrarCompra.Rows)
                 {
-                    total += subtotal;
+                    total += Convert.ToDecimal(fila.Cells["Subtotal"].Value.ToString());
                 }
+                txtTotal.Text = total.ToString("0.00");
             }
-
-            txtTotal.Text = total.ToString("0.00");
         }
 
         // Lógica para pintar el botón eliminar en el DataGridView
@@ -225,6 +218,7 @@ namespace CapaPresentacion
                 if (indice >= 0)
                 {
                     dgridRegistrarCompra.Rows.RemoveAt(indice);
+                    txtTotal.Text = "";
                     calcularTotal();
                 }
             }

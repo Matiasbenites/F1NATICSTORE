@@ -46,11 +46,7 @@
     <Compile Include="Compra.cs" />
     <Compile Include="Detalle_Compra.cs" />
     <Compile Include="Detalle_Venta.cs" />
-<<<<<<< HEAD
-    <Compile Include="obj\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.cs" />
-=======
     <Compile Include="Negocio.cs" />
->>>>>>> origin/sabrina-branch
     <Compile Include="Permiso.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

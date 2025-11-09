@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ibPagar = new FontAwesome.Sharp.IconButton();
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
-            this.dgridRegistrarCompra = new System.Windows.Forms.DataGridView();
+            this.dgridRegistrarVenta = new System.Windows.Forms.DataGridView();
             this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,10 +46,10 @@
             this.ibAgregarProducto = new FontAwesome.Sharp.IconButton();
             this.nudCantidad = new System.Windows.Forms.NumericUpDown();
             this.lblCantidad = new System.Windows.Forms.Label();
-            this.txtPrecioVenta = new System.Windows.Forms.TextBox();
+            this.txtStock = new System.Windows.Forms.TextBox();
+            this.lblStock = new System.Windows.Forms.Label();
             this.lblPrecioVenta = new System.Windows.Forms.Label();
-            this.lblPrecioCompra = new System.Windows.Forms.Label();
-            this.txtPrecioCompra = new System.Windows.Forms.TextBox();
+            this.txtPrecioVenta = new System.Windows.Forms.TextBox();
             this.btnBuscarProducto = new FontAwesome.Sharp.IconButton();
             this.txtIdProducto = new System.Windows.Forms.TextBox();
             this.txtProducto = new System.Windows.Forms.TextBox();
@@ -59,10 +59,10 @@
             this.gboxCliente = new System.Windows.Forms.GroupBox();
             this.txtIdProveedor = new System.Windows.Forms.TextBox();
             this.btnBuscarCliente = new FontAwesome.Sharp.IconButton();
-            this.txtNombreProveedor = new System.Windows.Forms.TextBox();
+            this.txtNombreCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.lblNroDoc = new System.Windows.Forms.Label();
-            this.txtDocProveedor = new System.Windows.Forms.TextBox();
+            this.txtDocCliente = new System.Windows.Forms.TextBox();
             this.cboxVenta = new System.Windows.Forms.GroupBox();
             this.cboxTDocumento = new System.Windows.Forms.ComboBox();
             this.lblTipoDoc = new System.Windows.Forms.Label();
@@ -74,7 +74,7 @@
             this.lblCambio = new System.Windows.Forms.Label();
             this.txtCambio = new System.Windows.Forms.TextBox();
             this.lblMontoPaga = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgridRegistrarCompra)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgridRegistrarVenta)).BeginInit();
             this.gboxProducto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).BeginInit();
             this.gboxCliente.SuspendLayout();
@@ -126,44 +126,46 @@
             this.txtTotal.Text = "0";
             this.txtTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // dgridRegistrarCompra
+            // dgridRegistrarVenta
             // 
-            this.dgridRegistrarCompra.AllowUserToAddRows = false;
-            this.dgridRegistrarCompra.BackgroundColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgridRegistrarCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgridRegistrarCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgridRegistrarCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgridRegistrarVenta.AllowUserToAddRows = false;
+            this.dgridRegistrarVenta.BackgroundColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgridRegistrarVenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgridRegistrarVenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgridRegistrarVenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProducto,
             this.Producto,
             this.Precio,
             this.Cantidad,
             this.Subtotal,
             this.btnEliminar});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgridRegistrarCompra.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgridRegistrarCompra.GridColor = System.Drawing.SystemColors.Info;
-            this.dgridRegistrarCompra.Location = new System.Drawing.Point(21, 294);
-            this.dgridRegistrarCompra.Name = "dgridRegistrarCompra";
-            this.dgridRegistrarCompra.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgridRegistrarCompra.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.dgridRegistrarCompra.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgridRegistrarCompra.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.dgridRegistrarCompra.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgridRegistrarCompra.Size = new System.Drawing.Size(757, 137);
-            this.dgridRegistrarCompra.TabIndex = 51;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgridRegistrarVenta.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgridRegistrarVenta.GridColor = System.Drawing.SystemColors.Info;
+            this.dgridRegistrarVenta.Location = new System.Drawing.Point(21, 294);
+            this.dgridRegistrarVenta.Name = "dgridRegistrarVenta";
+            this.dgridRegistrarVenta.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgridRegistrarVenta.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dgridRegistrarVenta.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgridRegistrarVenta.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dgridRegistrarVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgridRegistrarVenta.Size = new System.Drawing.Size(757, 137);
+            this.dgridRegistrarVenta.TabIndex = 51;
+            this.dgridRegistrarVenta.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgridRegistrarVenta_CellContentClick);
+            this.dgridRegistrarVenta.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgridRegistrarVenta_CellPainting);
             // 
             // IdProducto
             // 
@@ -175,10 +177,10 @@
             // Producto
             // 
             this.Producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Producto.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Producto.DefaultCellStyle = dataGridViewCellStyle6;
             this.Producto.HeaderText = "Producto";
             this.Producto.Name = "Producto";
             // 
@@ -197,20 +199,19 @@
             // Subtotal
             // 
             this.Subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.Format = "N2";
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.Format = "N2";
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle7;
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.Name = "Subtotal";
             // 
             // btnEliminar
             // 
-            this.btnEliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.btnEliminar.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.btnEliminar.HeaderText = "";
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.btnEliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.btnEliminar.Width = 19;
             // 
             // gboxProducto
             // 
@@ -218,10 +219,10 @@
             this.gboxProducto.Controls.Add(this.ibAgregarProducto);
             this.gboxProducto.Controls.Add(this.nudCantidad);
             this.gboxProducto.Controls.Add(this.lblCantidad);
-            this.gboxProducto.Controls.Add(this.txtPrecioVenta);
+            this.gboxProducto.Controls.Add(this.txtStock);
+            this.gboxProducto.Controls.Add(this.lblStock);
             this.gboxProducto.Controls.Add(this.lblPrecioVenta);
-            this.gboxProducto.Controls.Add(this.lblPrecioCompra);
-            this.gboxProducto.Controls.Add(this.txtPrecioCompra);
+            this.gboxProducto.Controls.Add(this.txtPrecioVenta);
             this.gboxProducto.Controls.Add(this.btnBuscarProducto);
             this.gboxProducto.Controls.Add(this.txtIdProducto);
             this.gboxProducto.Controls.Add(this.txtProducto);
@@ -257,6 +258,7 @@
             this.ibAgregarProducto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ibAgregarProducto.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ibAgregarProducto.UseVisualStyleBackColor = false;
+            this.ibAgregarProducto.Click += new System.EventHandler(this.ibAgregarProducto_Click);
             // 
             // nudCantidad
             // 
@@ -280,37 +282,39 @@
             this.lblCantidad.TabIndex = 39;
             this.lblCantidad.Text = "Cantidad:";
             // 
-            // txtPrecioVenta
+            // txtStock
             // 
-            this.txtPrecioVenta.Location = new System.Drawing.Point(538, 50);
-            this.txtPrecioVenta.Name = "txtPrecioVenta";
-            this.txtPrecioVenta.Size = new System.Drawing.Size(105, 20);
-            this.txtPrecioVenta.TabIndex = 38;
+            this.txtStock.Location = new System.Drawing.Point(538, 50);
+            this.txtStock.Name = "txtStock";
+            this.txtStock.ReadOnly = true;
+            this.txtStock.Size = new System.Drawing.Size(105, 20);
+            this.txtStock.TabIndex = 38;
+            // 
+            // lblStock
+            // 
+            this.lblStock.AutoSize = true;
+            this.lblStock.Location = new System.Drawing.Point(535, 35);
+            this.lblStock.Name = "lblStock";
+            this.lblStock.Size = new System.Drawing.Size(38, 13);
+            this.lblStock.TabIndex = 37;
+            this.lblStock.Text = "Stock:";
             // 
             // lblPrecioVenta
             // 
             this.lblPrecioVenta.AutoSize = true;
-            this.lblPrecioVenta.Location = new System.Drawing.Point(535, 35);
+            this.lblPrecioVenta.Location = new System.Drawing.Point(424, 35);
             this.lblPrecioVenta.Name = "lblPrecioVenta";
-            this.lblPrecioVenta.Size = new System.Drawing.Size(71, 13);
-            this.lblPrecioVenta.TabIndex = 37;
-            this.lblPrecioVenta.Text = "Precio Venta:";
+            this.lblPrecioVenta.Size = new System.Drawing.Size(40, 13);
+            this.lblPrecioVenta.TabIndex = 36;
+            this.lblPrecioVenta.Text = "Precio:";
             // 
-            // lblPrecioCompra
+            // txtPrecioVenta
             // 
-            this.lblPrecioCompra.AutoSize = true;
-            this.lblPrecioCompra.Location = new System.Drawing.Point(424, 35);
-            this.lblPrecioCompra.Name = "lblPrecioCompra";
-            this.lblPrecioCompra.Size = new System.Drawing.Size(79, 13);
-            this.lblPrecioCompra.TabIndex = 36;
-            this.lblPrecioCompra.Text = "Precio Compra:";
-            // 
-            // txtPrecioCompra
-            // 
-            this.txtPrecioCompra.Location = new System.Drawing.Point(427, 51);
-            this.txtPrecioCompra.Name = "txtPrecioCompra";
-            this.txtPrecioCompra.Size = new System.Drawing.Size(105, 20);
-            this.txtPrecioCompra.TabIndex = 35;
+            this.txtPrecioVenta.Location = new System.Drawing.Point(427, 51);
+            this.txtPrecioVenta.Name = "txtPrecioVenta";
+            this.txtPrecioVenta.Size = new System.Drawing.Size(105, 20);
+            this.txtPrecioVenta.TabIndex = 35;
+            this.txtPrecioVenta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecioVenta_KeyPress);
             // 
             // btnBuscarProducto
             // 
@@ -329,6 +333,7 @@
             this.btnBuscarProducto.Size = new System.Drawing.Size(38, 21);
             this.btnBuscarProducto.TabIndex = 34;
             this.btnBuscarProducto.UseVisualStyleBackColor = false;
+            this.btnBuscarProducto.Click += new System.EventHandler(this.btnBuscarProducto_Click);
             // 
             // txtIdProducto
             // 
@@ -336,7 +341,7 @@
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(29, 20);
             this.txtIdProducto.TabIndex = 34;
-            this.txtIdProducto.Text = "-1";
+            this.txtIdProducto.Text = "0";
             this.txtIdProducto.Visible = false;
             // 
             // txtProducto
@@ -371,16 +376,17 @@
             this.txtCodProducto.Name = "txtCodProducto";
             this.txtCodProducto.Size = new System.Drawing.Size(127, 20);
             this.txtCodProducto.TabIndex = 28;
+            this.txtCodProducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodProducto_KeyDown);
             // 
             // gboxCliente
             // 
             this.gboxCliente.BackColor = System.Drawing.SystemColors.Info;
             this.gboxCliente.Controls.Add(this.txtIdProveedor);
             this.gboxCliente.Controls.Add(this.btnBuscarCliente);
-            this.gboxCliente.Controls.Add(this.txtNombreProveedor);
+            this.gboxCliente.Controls.Add(this.txtNombreCliente);
             this.gboxCliente.Controls.Add(this.label2);
             this.gboxCliente.Controls.Add(this.lblNroDoc);
-            this.gboxCliente.Controls.Add(this.txtDocProveedor);
+            this.gboxCliente.Controls.Add(this.txtDocCliente);
             this.gboxCliente.ForeColor = System.Drawing.Color.Goldenrod;
             this.gboxCliente.Location = new System.Drawing.Point(402, 53);
             this.gboxCliente.Name = "gboxCliente";
@@ -395,7 +401,7 @@
             this.txtIdProveedor.Name = "txtIdProveedor";
             this.txtIdProveedor.Size = new System.Drawing.Size(29, 20);
             this.txtIdProveedor.TabIndex = 33;
-            this.txtIdProveedor.Text = "-1";
+            this.txtIdProveedor.Text = "0";
             this.txtIdProveedor.Visible = false;
             // 
             // btnBuscarCliente
@@ -415,22 +421,23 @@
             this.btnBuscarCliente.Size = new System.Drawing.Size(38, 21);
             this.btnBuscarCliente.TabIndex = 32;
             this.btnBuscarCliente.UseVisualStyleBackColor = false;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
-            // txtNombreProveedor
+            // txtNombreCliente
             // 
-            this.txtNombreProveedor.Location = new System.Drawing.Point(179, 51);
-            this.txtNombreProveedor.Name = "txtNombreProveedor";
-            this.txtNombreProveedor.Size = new System.Drawing.Size(175, 20);
-            this.txtNombreProveedor.TabIndex = 31;
+            this.txtNombreCliente.Location = new System.Drawing.Point(179, 51);
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Size = new System.Drawing.Size(175, 20);
+            this.txtNombreCliente.TabIndex = 31;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(176, 35);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 13);
+            this.label2.Size = new System.Drawing.Size(94, 13);
             this.label2.TabIndex = 30;
-            this.label2.Text = "Razón Social:";
+            this.label2.Text = "Nombre Completo:";
             // 
             // lblNroDoc
             // 
@@ -441,12 +448,12 @@
             this.lblNroDoc.TabIndex = 29;
             this.lblNroDoc.Text = "Número Documento:";
             // 
-            // txtDocProveedor
+            // txtDocCliente
             // 
-            this.txtDocProveedor.Location = new System.Drawing.Point(22, 51);
-            this.txtDocProveedor.Name = "txtDocProveedor";
-            this.txtDocProveedor.Size = new System.Drawing.Size(100, 20);
-            this.txtDocProveedor.TabIndex = 28;
+            this.txtDocCliente.Location = new System.Drawing.Point(22, 51);
+            this.txtDocCliente.Name = "txtDocCliente";
+            this.txtDocCliente.Size = new System.Drawing.Size(100, 20);
+            this.txtDocCliente.TabIndex = 28;
             // 
             // cboxVenta
             // 
@@ -494,6 +501,7 @@
             // 
             this.txtFecha.Location = new System.Drawing.Point(20, 51);
             this.txtFecha.Name = "txtFecha";
+            this.txtFecha.ReadOnly = true;
             this.txtFecha.Size = new System.Drawing.Size(100, 20);
             this.txtFecha.TabIndex = 28;
             // 
@@ -529,6 +537,8 @@
             this.txtMontoPago.Name = "txtMontoPago";
             this.txtMontoPago.Size = new System.Drawing.Size(105, 26);
             this.txtMontoPago.TabIndex = 43;
+            this.txtMontoPago.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMontoPago_KeyDown);
+            this.txtMontoPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMontoPago_KeyPress);
             // 
             // lblCambio
             // 
@@ -577,7 +587,7 @@
             this.Controls.Add(this.ibPagar);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.txtTotal);
-            this.Controls.Add(this.dgridRegistrarCompra);
+            this.Controls.Add(this.dgridRegistrarVenta);
             this.Controls.Add(this.gboxProducto);
             this.Controls.Add(this.gboxCliente);
             this.Controls.Add(this.cboxVenta);
@@ -586,7 +596,7 @@
             this.Name = "formVentas";
             this.Text = "formVentas";
             this.Load += new System.EventHandler(this.formVentas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgridRegistrarCompra)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgridRegistrarVenta)).EndInit();
             this.gboxProducto.ResumeLayout(false);
             this.gboxProducto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
@@ -604,15 +614,15 @@
         private FontAwesome.Sharp.IconButton ibPagar;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.TextBox txtTotal;
-        private System.Windows.Forms.DataGridView dgridRegistrarCompra;
+        private System.Windows.Forms.DataGridView dgridRegistrarVenta;
         private System.Windows.Forms.GroupBox gboxProducto;
         private FontAwesome.Sharp.IconButton ibAgregarProducto;
         private System.Windows.Forms.NumericUpDown nudCantidad;
         private System.Windows.Forms.Label lblCantidad;
-        private System.Windows.Forms.TextBox txtPrecioVenta;
+        private System.Windows.Forms.TextBox txtStock;
+        private System.Windows.Forms.Label lblStock;
         private System.Windows.Forms.Label lblPrecioVenta;
-        private System.Windows.Forms.Label lblPrecioCompra;
-        private System.Windows.Forms.TextBox txtPrecioCompra;
+        private System.Windows.Forms.TextBox txtPrecioVenta;
         private FontAwesome.Sharp.IconButton btnBuscarProducto;
         private System.Windows.Forms.TextBox txtIdProducto;
         private System.Windows.Forms.TextBox txtProducto;
@@ -622,10 +632,10 @@
         private System.Windows.Forms.GroupBox gboxCliente;
         private System.Windows.Forms.TextBox txtIdProveedor;
         private FontAwesome.Sharp.IconButton btnBuscarCliente;
-        private System.Windows.Forms.TextBox txtNombreProveedor;
+        private System.Windows.Forms.TextBox txtNombreCliente;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblNroDoc;
-        private System.Windows.Forms.TextBox txtDocProveedor;
+        private System.Windows.Forms.TextBox txtDocCliente;
         private System.Windows.Forms.GroupBox cboxVenta;
         private System.Windows.Forms.ComboBox cboxTDocumento;
         private System.Windows.Forms.Label lblTipoDoc;
@@ -633,15 +643,15 @@
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtMontoPago;
+        private System.Windows.Forms.Label lblCambio;
+        private System.Windows.Forms.TextBox txtCambio;
+        private System.Windows.Forms.Label lblMontoPaga;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.DataGridViewButtonColumn btnEliminar;
-        private System.Windows.Forms.TextBox txtMontoPago;
-        private System.Windows.Forms.Label lblCambio;
-        private System.Windows.Forms.TextBox txtCambio;
-        private System.Windows.Forms.Label lblMontoPaga;
     }
 }

@@ -666,12 +666,8 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconPictureBox iconPictureBox8;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox9;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox10;
-<<<<<<< HEAD
         private FontAwesome.Sharp.IconMenuItem menuProveedores;
-=======
-        private FontAwesome.Sharp.IconMenuItem iconProveedores;
         private ToolStripMenuItem submenuNegocio;
->>>>>>> origin/sabrina-branch
     }
 }
 

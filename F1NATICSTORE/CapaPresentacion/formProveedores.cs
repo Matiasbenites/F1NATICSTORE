@@ -20,7 +20,7 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
-        private void fromProveedores_Load(object sender, EventArgs e)
+        private void formProveedores_Load(object sender, EventArgs e)
         {
             cboxEstado.Items.Add(new OpcionCombo() { Valor = 1, Texto = "Activo" }); // Agrega una opción con valor 1 y texto "Activo"
             cboxEstado.Items.Add(new OpcionCombo() { Valor = 0, Texto = "Baja" }); // Agrega una opción con valor 0 y texto "Baja"

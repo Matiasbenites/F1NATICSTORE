@@ -31,6 +31,7 @@
             FontAwesome.Sharp.IconButton btnExportar;
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnBuscador = new FontAwesome.Sharp.IconButton();
             this.dgridData = new System.Windows.Forms.DataGridView();
             this.btnSeleccionar = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -140,23 +141,30 @@
             this.PrecioVenta,
             this.EstadoValor,
             this.Estado});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgridData.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgridData.Location = new System.Drawing.Point(285, 126);
             this.dgridData.MultiSelect = false;
             this.dgridData.Name = "dgridData";
             this.dgridData.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgridData.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgridData.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgridData.RowTemplate.Height = 28;
             this.dgridData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgridData.Size = new System.Drawing.Size(736, 233);
             this.dgridData.TabIndex = 50;
-            this.dgridData.UseWaitCursor = true;
             this.dgridData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgridData_CellClick);
             this.dgridData.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dgridData_CellPainting);
             // 
@@ -265,7 +273,6 @@
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(123, 20);
             this.txtBusqueda.TabIndex = 55;
-            this.txtBusqueda.UseWaitCursor = true;
             // 
             // cboxBusqueda
             // 
@@ -276,7 +283,6 @@
             this.cboxBusqueda.Name = "cboxBusqueda";
             this.cboxBusqueda.Size = new System.Drawing.Size(130, 21);
             this.cboxBusqueda.TabIndex = 54;
-            this.cboxBusqueda.UseWaitCursor = true;
             // 
             // label2
             // 
@@ -289,7 +295,6 @@
             this.label2.Size = new System.Drawing.Size(81, 17);
             this.label2.TabIndex = 53;
             this.label2.Text = "Buscar por:";
-            this.label2.UseWaitCursor = true;
             // 
             // txtId
             // 
@@ -298,7 +303,6 @@
             this.txtId.Size = new System.Drawing.Size(29, 20);
             this.txtId.TabIndex = 52;
             this.txtId.Text = "0";
-            this.txtId.UseWaitCursor = true;
             this.txtId.Visible = false;
             // 
             // label1
@@ -315,7 +319,6 @@
             this.label1.Size = new System.Drawing.Size(740, 68);
             this.label1.TabIndex = 51;
             this.label1.Text = "Lista de Productos";
-            this.label1.UseWaitCursor = true;
             // 
             // txtIndice
             // 
@@ -324,7 +327,6 @@
             this.txtIndice.Size = new System.Drawing.Size(29, 20);
             this.txtIndice.TabIndex = 58;
             this.txtIndice.Text = "-1";
-            this.txtIndice.UseWaitCursor = true;
             this.txtIndice.Visible = false;
             // 
             // lblDetalle_producto
@@ -338,7 +340,6 @@
             this.lblDetalle_producto.Size = new System.Drawing.Size(155, 25);
             this.lblDetalle_producto.TabIndex = 49;
             this.lblDetalle_producto.Text = "Detalle Producto";
-            this.lblDetalle_producto.UseWaitCursor = true;
             // 
             // btnEliminar
             // 
@@ -351,7 +352,7 @@
             this.btnEliminar.IconColor = System.Drawing.Color.White;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 21;
-            this.btnEliminar.Location = new System.Drawing.Point(60, 421);
+            this.btnEliminar.Location = new System.Drawing.Point(58, 421);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(149, 32);
@@ -416,7 +417,6 @@
             this.lblEstado.Size = new System.Drawing.Size(40, 13);
             this.lblEstado.TabIndex = 45;
             this.lblEstado.Text = "Estado";
-            this.lblEstado.UseWaitCursor = true;
             // 
             // cboxEstado
             // 
@@ -427,7 +427,6 @@
             this.cboxEstado.Name = "cboxEstado";
             this.cboxEstado.Size = new System.Drawing.Size(149, 21);
             this.cboxEstado.TabIndex = 44;
-            this.cboxEstado.UseWaitCursor = true;
             // 
             // cboCategoria
             // 
@@ -438,7 +437,6 @@
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(149, 21);
             this.cboCategoria.TabIndex = 43;
-            this.cboCategoria.UseWaitCursor = true;
             // 
             // lblRol
             // 
@@ -450,7 +448,6 @@
             this.lblRol.Size = new System.Drawing.Size(52, 13);
             this.lblRol.TabIndex = 42;
             this.lblRol.Text = "Categoria";
-            this.lblRol.UseWaitCursor = true;
             // 
             // txtDescripcion
             // 
@@ -458,7 +455,6 @@
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(149, 20);
             this.txtDescripcion.TabIndex = 38;
-            this.txtDescripcion.UseWaitCursor = true;
             // 
             // txtNombre
             // 
@@ -466,7 +462,6 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(149, 20);
             this.txtNombre.TabIndex = 37;
-            this.txtNombre.UseWaitCursor = true;
             // 
             // txtCodigo
             // 
@@ -474,7 +469,6 @@
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(149, 20);
             this.txtCodigo.TabIndex = 36;
-            this.txtCodigo.UseWaitCursor = true;
             // 
             // lblCorreo
             // 
@@ -486,7 +480,6 @@
             this.lblCorreo.Size = new System.Drawing.Size(63, 13);
             this.lblCorreo.TabIndex = 34;
             this.lblCorreo.Text = "Descripcion";
-            this.lblCorreo.UseWaitCursor = true;
             // 
             // lblNombreCompleto
             // 
@@ -498,7 +491,6 @@
             this.lblNombreCompleto.Size = new System.Drawing.Size(44, 13);
             this.lblNombreCompleto.TabIndex = 33;
             this.lblNombreCompleto.Text = "Nombre";
-            this.lblNombreCompleto.UseWaitCursor = true;
             // 
             // lbl
             // 
@@ -510,7 +502,6 @@
             this.lbl.Size = new System.Drawing.Size(40, 13);
             this.lbl.TabIndex = 32;
             this.lbl.Text = "Codigo";
-            this.lbl.UseWaitCursor = true;
             // 
             // lblCore
             // 
@@ -521,7 +512,6 @@
             this.lblCore.Name = "lblCore";
             this.lblCore.Size = new System.Drawing.Size(253, 569);
             this.lblCore.TabIndex = 31;
-            this.lblCore.UseWaitCursor = true;
             // 
             // formProductos
             // 
@@ -554,7 +544,6 @@
             this.Controls.Add(this.lblCore);
             this.Name = "formProductos";
             this.Padding = new System.Windows.Forms.Padding(2, 0, 0, 0);
-            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.formProductos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgridData)).EndInit();
             this.ResumeLayout(false);
