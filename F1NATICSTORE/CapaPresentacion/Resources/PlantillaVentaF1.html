@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Factura de Venta - @nombrenegocio</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 25px; font-size: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #000; padding: 6px; text-align: center; }
+    .borderless td { border: none; }
+    .header { text-align: center; }
+    .title { font-size: 20px; font-weight: bold; color: #d32f2f; }
+    .sub { font-size: 12px; }
+    .gray { background-color: #E0E0E0; font-weight: bold; }
+    .footer { font-size: 11px; text-align: center; margin-top: 20px; color: #555; }
+    .logo { width: 80px; height: 80px; object-fit: contain; }
+    .right { text-align: right; }
+  </style>
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <table class="borderless">
+    <tr>
+      <td style="width:15%; text-align:left; vertical-align:top;">
+        <img src="@logoempresa" class="logo" alt="logo">
+      </td>
+      <td style="width:60%; text-align:center; vertical-align:top;">
+        <div class="title">@nombrenegocio</div>
+        <div class="sub">Factura / Comprobante de Venta</div>
+        <div class="sub">CUIT/CUIL: @cuitempresa | IVA: @condicioniva</div>
+        <div class="sub">@direccionempresa</div>
+      </td>
+      <td style="width:25%; text-align:center; vertical-align:top;">
+        <table style="width:100%;">
+          <tr><td class="gray">@tipocomprobante</td></tr>
+          <tr><td style="font-weight:bold; font-size:14px;">@numerocomprobante</td></tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <hr style="margin-top:10px; margin-bottom:10px;">
+
+  <!-- DATOS DEL CLIENTE -->
+  <table class="borderless">
+    <tr>
+      <td><b>Cliente:</b> @nombrecliente</td>
+      <td><b>CUIT/DNI:</b> @cuitcliente</td>
+      <td><b>Dirección:</b> @direccioncliente</td>
+    </tr>
+    <tr>
+      <td><b>Fecha de Emisión:</b> @fechaemision</td>
+      <td><b>Condición IVA:</b> @condicionivacliente</td>
+      <td><b>Vendedor:</b> @usuarioemisor</td>
+    </tr>
+  </table>
+
+  <div style="height:10px;"></div>
+
+  <!-- DETALLE DE VENTA -->
+  <table>
+    <thead>
+      <tr class="gray">
+        <th>Código</th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario ($)</th>
+        <th>Descuento (%)</th>
+        <th>IVA (%)</th>
+        <th>Subtotal ($)</th>
+      </tr>
+    </thead>
+    <tbody>
+      @filas
+    </tbody>
+  </table>
+
+  <table class="borderless" style="margin-top:10px;">
+    <tr>
+      <td style="width:70%;"></td>
+      <td class="right">Subtotal:</td>
+      <td class="right">@subtotal</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="right">IVA (21%):</td>
+      <td class="right">@iva</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="right">Descuento:</td>
+      <td class="right">@descuento</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td class="right"><b>Total:</b></td>
+      <td class="right"><b>@montototal</b></td>
+    </tr>
+  </table>
+
+  <div class="footer">
+    “Gracias por su compra” — F1NATIC STORE, merch

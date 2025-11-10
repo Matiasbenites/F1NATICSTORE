@@ -28,8 +28,10 @@ namespace CapaPresentacion
 
         private void formCompras_Load(object sender, EventArgs e)
         {
-            cboxTDocumento.Items.Add(new OpcionCombo() { Valor = "Boleta", Texto = "Activo" });
-            cboxTDocumento.Items.Add(new OpcionCombo() { Valor = "Factura", Texto = "Inactivo" });
+            cboxTDocumento.Items.Add(new OpcionCombo() { Valor = "Factura A", Texto = "Factura A" });
+            cboxTDocumento.Items.Add(new OpcionCombo() { Valor = "Factura B", Texto = "Factura B" });
+            cboxTDocumento.Items.Add(new OpcionCombo() { Valor = "Factura C", Texto = "Factura C" });
+            cboxTDocumento.Items.Add(new OpcionCombo() { Valor = "OTROS", Texto = "OTROS" });
             cboxTDocumento.DisplayMember = "Texto"; // Establece el miembro de visualización para mostrar el texto
             cboxTDocumento.ValueMember = "Valor"; // Establece el miembro de valor para obtener el valor seleccionado
             cboxTDocumento.SelectedIndex = 0; // Selecciona la primera opción por defecto

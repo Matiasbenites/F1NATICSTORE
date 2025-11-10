@@ -25,8 +25,10 @@ namespace CapaPresentacion
 
         private void formVentas_Load(object sender, EventArgs e)
         {
-            cboxTDocumento.Items.Add(new OpcionCombo() { Valor = "Boleta", Texto = "Boleta" });
-            cboxTDocumento.Items.Add(new OpcionCombo() { Valor = "Factura", Texto = "Factura" });
+            cboxTDocumento.Items.Add(new OpcionCombo() { Valor = "Factura A", Texto = "Factura A" });
+            cboxTDocumento.Items.Add(new OpcionCombo() { Valor = "Factura B", Texto = "Factura B" });
+            cboxTDocumento.Items.Add(new OpcionCombo() { Valor = "Factura C", Texto = "Factura C" });
+            cboxTDocumento.Items.Add(new OpcionCombo() { Valor = "OTROS", Texto = "OTROS" });
             cboxTDocumento.DisplayMember = "Texto"; // Establece el miembro de visualización para mostrar el texto
             cboxTDocumento.ValueMember = "Valor";   // Establece el miembro de valor para obtener el valor seleccionado
             cboxTDocumento.SelectedIndex = 0;      // Selecciona la primera opción por defecto
@@ -147,7 +149,15 @@ namespace CapaPresentacion
             {
                 decimal subtotal = precio * nudCantidad.Value;
 
-                dgridRegistrarVenta.Rows.Add(new object[] {
+                // Restar el stock del producto en la base de datos
+                bool respuesta = new CN_Venta().RestarStock(
+                    Convert.ToInt32(txtIdProducto.Text),
+                    Convert.ToInt32(nudCantidad.Value.ToString()));
+
+                if (respuesta)
+                {
+
+                    dgridRegistrarVenta.Rows.Add(new object[] {
                     txtIdProducto.Text,                   // IdProducto (oculto)
                     txtProducto.Text,                     // Producto (nombre)
                     precio.ToString("0.00"),         // PrecioVenta
@@ -155,9 +165,10 @@ namespace CapaPresentacion
                     (nudCantidad.Value * precio).ToString("0.00") // Subtotal
                 });
 
-                calcularTotal();
-                limpiarProducto();
-                txtCodProducto.Select();
+                    calcularTotal();
+                    limpiarProducto();
+                    txtCodProducto.Select();
+                }
             }
         }
 
@@ -214,11 +225,19 @@ namespace CapaPresentacion
 
                 if (indice >= 0)
                 {
+
+                    bool respuesta = new CN_Venta().SumarStock( // Al eliminar el producto de la venta, se vuelve a sumar el stock en la base de datos
+                        Convert.ToInt32(dgridRegistrarVenta.Rows[indice].Cells["IdProducto"].Value.ToString()),
+                        Convert.ToInt32(dgridRegistrarVenta.Rows[indice].Cells["Cantidad"].Value.ToString()));
+
+                    if (respuesta)
+                    {
                     dgridRegistrarVenta.Rows.RemoveAt(indice);
                     txtCambio.Text = "";
                     txtTotal.Text = "";
                     txtMontoPago.Text = "";
                     calcularTotal();
+                    }
                 }
             }
         }
@@ -322,6 +341,87 @@ namespace CapaPresentacion
             if(e.KeyData == Keys.Enter)
             {
                 calcularCambio();
+            }
+        }
+
+        private void ibPagar_Click(object sender, EventArgs e)
+        {
+            if (txtDocCliente.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un cliente para la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (txtNombreCliente.Text == "")
+            {
+                MessageBox.Show("Debe seleccionar un cliente para la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+            if (dgridRegistrarVenta.Rows.Count < 1)
+            {
+                MessageBox.Show("Debe agregar productos a la venta", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            // Crear el objeto Venta y completar sus propiedades
+            DataTable detalle_venta = new DataTable();
+
+            detalle_venta.Columns.Add("IdProducto", typeof(int));
+            detalle_venta.Columns.Add("PrecioVenta", typeof(decimal));
+            detalle_venta.Columns.Add("Cantidad", typeof(int));
+            detalle_venta.Columns.Add("SubTotal", typeof(decimal));
+
+            // Llenar el DataTable con los detalles de la venta desde el DataGridView
+            foreach (DataGridViewRow row in dgridRegistrarVenta.Rows)
+            {
+                detalle_venta.Rows.Add(
+                    new object[]
+                    {
+                        row.Cells["IdProducto"].Value.ToString(),
+                        row.Cells["Precio"].Value.ToString(),
+                        row.Cells["Cantidad"].Value.ToString(),
+                        row.Cells["Subtotal"].Value.ToString()
+                    });
+            }
+            int idcorrelativo = new CN_Venta().ObtenerCorrelativo();
+            string numeroDocumento = string.Format("{0:00000000}", idcorrelativo);
+            calcularCambio();
+
+            Venta oventa = new Venta()
+            {
+                oUsuario = new Usuario() { IdUsuario = _Usuario.IdUsuario },
+                TipoDocumento = ((OpcionCombo)cboxTDocumento.SelectedItem).Valor.ToString(),
+                NumeroDocumento = numeroDocumento,
+                DocumentoCliente = txtDocCliente.Text,
+                NombreCliente = txtNombreCliente.Text,
+                MontoPago = Convert.ToDecimal(txtMontoPago.Text),
+                MontoCambio = Convert.ToDecimal(txtCambio.Text),
+                MontoTotal = Convert.ToDecimal(txtTotal.Text)
+            };
+
+            string mensaje = string.Empty;
+            bool respuesta = new CN_Venta().Registrar(oventa, detalle_venta, out mensaje);
+
+            if (respuesta)
+            {
+                var result = MessageBox.Show("Numero de venta generado:\n" + numeroDocumento + "\n\n¿Desea copiar al portapapeles?", "Mensaje", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (result == DialogResult.Yes)
+                {
+                    Clipboard.SetText(numeroDocumento);
+
+                    txtDocCliente.Text = "";
+                    txtNombreCliente.Text = "";
+                    dgridRegistrarVenta.Rows.Clear();
+                    calcularTotal();
+                    txtMontoPago.Text = "";
+                    txtCambio.Text = "";
+                    txtTotal.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show(mensaje, "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
     }

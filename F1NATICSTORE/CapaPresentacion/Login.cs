@@ -67,6 +67,9 @@ namespace CapaPresentacion
 
             if (ousuario != null)
             {
+                // Guardar el usuario en la sesión para que otros formularios puedan usar la información del usuario logueado
+                Session.CurrentUser = ousuario;
+
                 Inicio formInicio = new Inicio(ousuario);
 
                 formInicio.Show();

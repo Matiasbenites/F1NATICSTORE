@@ -14,6 +14,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -80,6 +95,7 @@
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
@@ -154,11 +170,23 @@
     <Compile Include="formProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="formReporteCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formReporteCompras.Designer.cs">
+      <DependentUpon>formReporteCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="formReportes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formReportes.Designer.cs">
       <DependentUpon>formReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formReporteVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formReporteVentas.Designer.cs">
+      <DependentUpon>formReporteVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="formUsuarios.cs">
       <SubType>Form</SubType>
@@ -193,6 +221,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Microsoft\VisualBasic\Interaction.cs" />
     <Compile Include="Modales\mdCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +248,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Session.cs" />
     <Compile Include="Utilidades\OpcionCombo.cs" />
     <EmbeddedResource Include="formBackup.resx">
       <DependentUpon>formBackup.cs</DependentUpon>
@@ -245,8 +275,14 @@
     <EmbeddedResource Include="formProveedores.resx">
       <DependentUpon>formProveedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formReporteCompras.resx">
+      <DependentUpon>formReporteCompras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formReportes.resx">
       <DependentUpon>formReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formReporteVentas.resx">
+      <DependentUpon>formReporteVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formUsuarios.resx">
       <DependentUpon>formUsuarios.cs</DependentUpon>
@@ -353,6 +389,7 @@
     <None Include="Resources\delete_40623.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\html" />
     <None Include="Resources\Logo_Williams.png" />
   </ItemGroup>
   <ItemGroup>
@@ -406,11 +443,24 @@
     <Content Include="obj\Debug\CapaPresentacion.pdb" />
     <Content Include="obj\Debug\TempPE\F1naticStoreDataSet.Designer.cs.dll" />
     <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <None Include="Resources\PlantillaVentaF1.html" />
     <None Include="Resources\Factura_F1NATIC_STORE.html" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Debug\" />
     <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

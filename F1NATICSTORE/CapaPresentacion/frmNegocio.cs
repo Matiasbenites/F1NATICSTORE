@@ -21,12 +21,16 @@ namespace CapaPresentacion
         }
         public Image ByteToImage(byte[] imageBytes)
         {
-            MemoryStream ms = new MemoryStream();// nos permite guardar imagenes en memoria
-            ms.Write(imageBytes, 0, imageBytes.Length);
-            Image image =new Bitmap (ms);
+            // Validar entrada
+            if (imageBytes == null || imageBytes.Length ==0)
+                return null;
 
-            return image;
-
+            using (var ms = new MemoryStream(imageBytes))
+            using (var tmp = Image.FromStream(ms))
+            {
+                // Devolver una copia independiente del stream
+                return new Bitmap(tmp);
+            }
         }
 
         private void frmNegocio_Load(object sender, EventArgs e)

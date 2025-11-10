@@ -48,8 +48,11 @@ namespace CapaPresentacion
             this.menuProductos = new FontAwesome.Sharp.IconMenuItem();
             this.submenuCategoria = new FontAwesome.Sharp.IconMenuItem();
             this.submenuProducto = new FontAwesome.Sharp.IconMenuItem();
+            this.submenuNegocio = new System.Windows.Forms.ToolStripMenuItem();
             this.menuProveedores = new FontAwesome.Sharp.IconMenuItem();
             this.menuReportes = new FontAwesome.Sharp.IconMenuItem();
+            this.submenuReporteCompras = new System.Windows.Forms.ToolStripMenuItem();
+            this.submenuReporteVentas = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSalir = new FontAwesome.Sharp.IconMenuItem();
             this.iconPictureBox9 = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox8 = new FontAwesome.Sharp.IconPictureBox();
@@ -63,7 +66,6 @@ namespace CapaPresentacion
             this.iconAlpine = new FontAwesome.Sharp.IconPictureBox();
             this.iconWilliams = new FontAwesome.Sharp.IconPictureBox();
             this.iconPictureBox10 = new FontAwesome.Sharp.IconPictureBox();
-            this.submenuNegocio = new System.Windows.Forms.ToolStripMenuItem();
             this.menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox8)).BeginInit();
@@ -291,7 +293,7 @@ namespace CapaPresentacion
             this.submenuCategoria.IconColor = System.Drawing.Color.Black;
             this.submenuCategoria.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuCategoria.Name = "submenuCategoria";
-            this.submenuCategoria.Size = new System.Drawing.Size(180, 22);
+            this.submenuCategoria.Size = new System.Drawing.Size(125, 22);
             this.submenuCategoria.Text = "Categoría";
             this.submenuCategoria.Click += new System.EventHandler(this.submenuCategoria_Click);
             // 
@@ -301,9 +303,16 @@ namespace CapaPresentacion
             this.submenuProducto.IconColor = System.Drawing.Color.Black;
             this.submenuProducto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.submenuProducto.Name = "submenuProducto";
-            this.submenuProducto.Size = new System.Drawing.Size(180, 22);
+            this.submenuProducto.Size = new System.Drawing.Size(125, 22);
             this.submenuProducto.Text = "Producto";
             this.submenuProducto.Click += new System.EventHandler(this.submenuProducto_Click);
+            // 
+            // submenuNegocio
+            // 
+            this.submenuNegocio.Name = "submenuNegocio";
+            this.submenuNegocio.Size = new System.Drawing.Size(125, 22);
+            this.submenuNegocio.Text = "Negocio";
+            this.submenuNegocio.Click += new System.EventHandler(this.submenuNegocio_Click);
             // 
             // menuProveedores
             // 
@@ -323,6 +332,9 @@ namespace CapaPresentacion
             // menuReportes
             // 
             this.menuReportes.AutoSize = false;
+            this.menuReportes.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.submenuReporteCompras,
+            this.submenuReporteVentas});
             this.menuReportes.ForeColor = System.Drawing.Color.Black;
             this.menuReportes.IconChar = FontAwesome.Sharp.IconChar.ChartBar;
             this.menuReportes.IconColor = System.Drawing.Color.Black;
@@ -333,7 +345,20 @@ namespace CapaPresentacion
             this.menuReportes.Size = new System.Drawing.Size(122, 69);
             this.menuReportes.Text = "Reportes";
             this.menuReportes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.menuReportes.Click += new System.EventHandler(this.menuReportes_Click);
+            // 
+            // submenuReporteCompras
+            // 
+            this.submenuReporteCompras.Name = "submenuReporteCompras";
+            this.submenuReporteCompras.Size = new System.Drawing.Size(180, 22);
+            this.submenuReporteCompras.Text = "Reporte Compras";
+            this.submenuReporteCompras.Click += new System.EventHandler(this.submenuReporteCompras_Click);
+            // 
+            // submenuReporteVentas
+            // 
+            this.submenuReporteVentas.Name = "submenuReporteVentas";
+            this.submenuReporteVentas.Size = new System.Drawing.Size(180, 22);
+            this.submenuReporteVentas.Text = "Reporte Ventas";
+            this.submenuReporteVentas.Click += new System.EventHandler(this.submenuReporteVentas_Click);
             // 
             // menuSalir
             // 
@@ -559,19 +584,12 @@ namespace CapaPresentacion
             this.iconPictureBox10.IconColor = System.Drawing.Color.Transparent;
             this.iconPictureBox10.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconPictureBox10.IconSize = 49;
-            this.iconPictureBox10.Location = new System.Drawing.Point(1085, 82);
+            this.iconPictureBox10.Location = new System.Drawing.Point(1107, 82);
             this.iconPictureBox10.Name = "iconPictureBox10";
-            this.iconPictureBox10.Size = new System.Drawing.Size(191, 49);
+            this.iconPictureBox10.Size = new System.Drawing.Size(169, 49);
             this.iconPictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.iconPictureBox10.TabIndex = 16;
             this.iconPictureBox10.TabStop = false;
-            // 
-            // submenuNegocio
-            // 
-            this.submenuNegocio.Name = "submenuNegocio";
-            this.submenuNegocio.Size = new System.Drawing.Size(180, 22);
-            this.submenuNegocio.Text = "Negocio";
-            this.submenuNegocio.Click += new System.EventHandler(this.submenuNegocio_Click);
             // 
             // Inicio
             // 
@@ -668,6 +686,8 @@ namespace CapaPresentacion
         private FontAwesome.Sharp.IconPictureBox iconPictureBox10;
         private FontAwesome.Sharp.IconMenuItem menuProveedores;
         private ToolStripMenuItem submenuNegocio;
+        private ToolStripMenuItem submenuReporteCompras;
+        private ToolStripMenuItem submenuReporteVentas;
     }
 }
 

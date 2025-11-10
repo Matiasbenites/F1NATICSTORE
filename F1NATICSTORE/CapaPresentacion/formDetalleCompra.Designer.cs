@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             FontAwesome.Sharp.IconButton btnExportar;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtTitulo = new System.Windows.Forms.Label();
             this.btnBuscador = new FontAwesome.Sharp.IconButton();
             this.btnLimpiarBuscador = new FontAwesome.Sharp.IconButton();
@@ -40,21 +40,19 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cboxTipo = new System.Windows.Forms.GroupBox();
+            this.txtTipoDocumento = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblTipoDoc = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
             this.txtNombreProveedor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblNroDoc = new System.Windows.Forms.Label();
             this.txtDocProveedor = new System.Windows.Forms.TextBox();
             this.dgridRegistrarCompra = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtMontoTotal = new System.Windows.Forms.TextBox();
-            this.txtNumeroDocumento = new System.Windows.Forms.TextBox();
-            this.txtTipoDocumento = new System.Windows.Forms.TextBox();
             this.IdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,11 +60,36 @@
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtMontoTotal = new System.Windows.Forms.TextBox();
             btnExportar = new FontAwesome.Sharp.IconButton();
             this.cboxTipo.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgridRegistrarCompra)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnExportar
+            // 
+            btnExportar.BackColor = System.Drawing.Color.Gold;
+            btnExportar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            btnExportar.FlatAppearance.BorderSize = 2;
+            btnExportar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            btnExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            btnExportar.ForeColor = System.Drawing.Color.Black;
+            btnExportar.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
+            btnExportar.IconColor = System.Drawing.Color.Black;
+            btnExportar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnExportar.IconSize = 25;
+            btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            btnExportar.Location = new System.Drawing.Point(477, 471);
+            btnExportar.Name = "btnExportar";
+            btnExportar.Size = new System.Drawing.Size(127, 33);
+            btnExportar.TabIndex = 67;
+            btnExportar.Text = "Descargar PDF";
+            btnExportar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            btnExportar.UseVisualStyleBackColor = false;
+            btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
             // 
             // txtTitulo
             // 
@@ -166,6 +189,29 @@
             this.cboxTipo.TabStop = false;
             this.cboxTipo.Text = "Información Compra";
             // 
+            // txtTipoDocumento
+            // 
+            this.txtTipoDocumento.Location = new System.Drawing.Point(145, 51);
+            this.txtTipoDocumento.Name = "txtTipoDocumento";
+            this.txtTipoDocumento.Size = new System.Drawing.Size(202, 20);
+            this.txtTipoDocumento.TabIndex = 34;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(368, 51);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(202, 20);
+            this.txtUsuario.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(365, 35);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Usuario";
+            // 
             // lblTipoDoc
             // 
             this.lblTipoDoc.AutoSize = true;
@@ -191,22 +237,6 @@
             this.txtFecha.Size = new System.Drawing.Size(100, 20);
             this.txtFecha.TabIndex = 28;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(365, 35);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Usuario";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(368, 51);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(202, 20);
-            this.txtUsuario.TabIndex = 33;
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.Info;
@@ -222,6 +252,14 @@
             this.groupBox1.TabIndex = 65;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Información Proveedor";
+            // 
+            // txtNumeroDocumento
+            // 
+            this.txtNumeroDocumento.Location = new System.Drawing.Point(506, 51);
+            this.txtNumeroDocumento.Name = "txtNumeroDocumento";
+            this.txtNumeroDocumento.Size = new System.Drawing.Size(75, 20);
+            this.txtNumeroDocumento.TabIndex = 32;
+            this.txtNumeroDocumento.Visible = false;
             // 
             // txtNombreProveedor
             // 
@@ -259,14 +297,14 @@
             // 
             this.dgridRegistrarCompra.AllowUserToAddRows = false;
             this.dgridRegistrarCompra.BackgroundColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgridRegistrarCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgridRegistrarCompra.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgridRegistrarCompra.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgridRegistrarCompra.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdProducto,
@@ -276,14 +314,14 @@
             this.Cantidad,
             this.Subtotal,
             this.btnEliminar});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Info;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgridRegistrarCompra.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Info;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgridRegistrarCompra.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgridRegistrarCompra.GridColor = System.Drawing.SystemColors.Info;
             this.dgridRegistrarCompra.Location = new System.Drawing.Point(17, 316);
             this.dgridRegistrarCompra.Name = "dgridRegistrarCompra";
@@ -295,67 +333,6 @@
             this.dgridRegistrarCompra.Size = new System.Drawing.Size(587, 137);
             this.dgridRegistrarCompra.TabIndex = 66;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Goldenrod;
-            this.label5.Location = new System.Drawing.Point(31, 474);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(177, 31);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Monto Total:";
-            // 
-            // txtMontoTotal
-            // 
-            this.txtMontoTotal.BackColor = System.Drawing.SystemColors.Info;
-            this.txtMontoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMontoTotal.Location = new System.Drawing.Point(214, 474);
-            this.txtMontoTotal.Name = "txtMontoTotal";
-            this.txtMontoTotal.Size = new System.Drawing.Size(100, 30);
-            this.txtMontoTotal.TabIndex = 34;
-            this.txtMontoTotal.Text = "0";
-            this.txtMontoTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // btnExportar
-            // 
-            btnExportar.BackColor = System.Drawing.Color.Gold;
-            btnExportar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            btnExportar.FlatAppearance.BorderSize = 2;
-            btnExportar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            btnExportar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            btnExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            btnExportar.ForeColor = System.Drawing.Color.Black;
-            btnExportar.IconChar = FontAwesome.Sharp.IconChar.FilePdf;
-            btnExportar.IconColor = System.Drawing.Color.Black;
-            btnExportar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnExportar.IconSize = 25;
-            btnExportar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            btnExportar.Location = new System.Drawing.Point(477, 471);
-            btnExportar.Name = "btnExportar";
-            btnExportar.Size = new System.Drawing.Size(127, 33);
-            btnExportar.TabIndex = 67;
-            btnExportar.Text = "Descargar PDF";
-            btnExportar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            btnExportar.UseVisualStyleBackColor = false;
-            btnExportar.Click += new System.EventHandler(this.btnExportar_Click);
-            // 
-            // txtNumeroDocumento
-            // 
-            this.txtNumeroDocumento.Location = new System.Drawing.Point(506, 51);
-            this.txtNumeroDocumento.Name = "txtNumeroDocumento";
-            this.txtNumeroDocumento.Size = new System.Drawing.Size(75, 20);
-            this.txtNumeroDocumento.TabIndex = 32;
-            this.txtNumeroDocumento.Visible = false;
-            // 
-            // txtTipoDocumento
-            // 
-            this.txtTipoDocumento.Location = new System.Drawing.Point(145, 51);
-            this.txtTipoDocumento.Name = "txtTipoDocumento";
-            this.txtTipoDocumento.Size = new System.Drawing.Size(202, 20);
-            this.txtTipoDocumento.TabIndex = 34;
-            // 
             // IdProducto
             // 
             this.IdProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -366,10 +343,10 @@
             // Producto
             // 
             this.Producto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Producto.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Producto.DefaultCellStyle = dataGridViewCellStyle2;
             this.Producto.HeaderText = "Producto";
             this.Producto.Name = "Producto";
             // 
@@ -394,9 +371,9 @@
             // Subtotal
             // 
             this.Subtotal.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.Format = "N2";
-            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Format = "N2";
+            this.Subtotal.DefaultCellStyle = dataGridViewCellStyle3;
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.Name = "Subtotal";
             // 
@@ -409,13 +386,36 @@
             this.btnEliminar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.btnEliminar.Visible = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Goldenrod;
+            this.label5.Location = new System.Drawing.Point(31, 474);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(177, 31);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Monto Total:";
+            // 
+            // txtMontoTotal
+            // 
+            this.txtMontoTotal.BackColor = System.Drawing.SystemColors.Info;
+            this.txtMontoTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMontoTotal.Location = new System.Drawing.Point(214, 474);
+            this.txtMontoTotal.Name = "txtMontoTotal";
+            this.txtMontoTotal.Size = new System.Drawing.Size(100, 30);
+            this.txtMontoTotal.TabIndex = 34;
+            this.txtMontoTotal.Text = "0";
+            this.txtMontoTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // formDetalleCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CapaPresentacion.Properties.Resources.ferrari_frm_user;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(628, 526);
+            this.ClientSize = new System.Drawing.Size(633, 526);
             this.Controls.Add(btnExportar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtMontoTotal);
@@ -430,6 +430,7 @@
             this.Controls.Add(this.txtTitulo);
             this.Name = "formDetalleCompra";
             this.Text = "formDetalleCompra";
+            this.Load += new System.EventHandler(this.formDetalleCompra_Load);
             this.cboxTipo.ResumeLayout(false);
             this.cboxTipo.PerformLayout();
             this.groupBox1.ResumeLayout(false);

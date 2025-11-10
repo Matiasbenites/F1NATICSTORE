@@ -91,38 +91,6 @@ namespace CapaPresentacion.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
-        ///&lt;html lang=&quot;es&quot;&gt;
-        ///&lt;head&gt;
-        ///    &lt;meta charset=&quot;UTF-8&quot;&gt;
-        ///    &lt;title&gt;Factura - F1NATIC STORE&lt;/title&gt;
-        ///    &lt;style&gt;
-        ///        body {
-        ///            font-family: Arial, sans-serif;
-        ///            margin: 30px;
-        ///        }
-        ///        .header, .footer {
-        ///            width: 100%;
-        ///            text-align: center;
-        ///        }
-        ///        .header h1 {
-        ///            margin: 0;
-        ///            font-size: 26px;
-        ///            color: #d32f2f;
-        ///        }
-        ///        .header h2 {
-        ///            margin: 0;
-        ///            font-size: 16px;
-        ///        }
-        ///        [resto de la cadena truncado]&quot;;.
-        /// </summary>
-        internal static string Factura_F1NATIC_STORE {
-            get {
-                return ResourceManager.GetString("Factura_F1NATIC_STORE", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap ferrari_frm_user {
@@ -259,6 +227,38 @@ namespace CapaPresentacion.Properties {
             get {
                 object obj = ResourceManager.GetObject("Logo_Williams", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] PlantillaFacturaF1 {
+            get {
+                object obj = ResourceManager.GetObject("PlantillaFacturaF1", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html lang=&quot;es&quot;&gt;
+        ///&lt;head&gt;
+        ///  &lt;meta charset=&quot;UTF-8&quot;&gt;
+        ///  &lt;title&gt;Factura de Venta - @nombrenegocio&lt;/title&gt;
+        ///  &lt;style&gt;
+        ///    body { font-family: Arial, sans-serif; margin: 25px; font-size: 12px; }
+        ///    table { width: 100%; border-collapse: collapse; }
+        ///    th, td { border: 1px solid #000; padding: 6px; text-align: center; }
+        ///    .borderless td { border: none; }
+        ///    .header { text-align: center; }
+        ///    .title { font-size: 20px; font-weight: bold; color: #d32f2f; }
+        ///    .sub { font-size: 12px; }
+        /// [resto de la cadena truncado]&quot;;.
+        /// </summary>
+        internal static string PlantillaVentaF1 {
+            get {
+                return ResourceManager.GetString("PlantillaVentaF1", resourceCulture);
             }
         }
         
